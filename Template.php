@@ -1,6 +1,6 @@
 <?php
 /**
- * Magento
+ * Magentoee
  *
  * NOTICE OF LICENSE
  *
