@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Morphes_Categoryattr>
+            <version>0.0.1</version> 
+        </Morphes_Categoryattr>
+    </modules>
+    <frontend>
+        <routers>
+            <categoryattr>
+                <use>standard</use>
+                <args>
+                    <module>Morphes_Categoryattr</module>
+                    <frontName>getcategoryparam</frontName>
+                </args>
+            </categoryattr>
+        </routers>
+    </frontend>
+     <global>
+      <models>
+            <categoryattr>
+                <class>Morphes_Categoryattr_Model</class>                
+            </categoryattr>
+        </models>
+      <resources>
+          <sqlmorphes_setup> 
+            <setup>
+              <module>Morphes_Categoryattr</module>              
+            </setup>            
+          </sqlmorphes_setup>
+      </resources>
+    </global>
+</config>

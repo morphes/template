@@ -1,0 +1,34 @@
+
+
+<ol class="category-filter-values" id="<?php echo $this->getVar(); ?>">
+    <?php foreach ($this->getValues() as $_item): ?>
+        <li><?php echo $_item?></li>
+    <?php endforeach ?>
+</ol>
+<?php //echo "<pre>";
+// $layer = Mage::getModel("catalog/layer");
+// $category = Mage::getModel("catalog/category")->load('39');
+//     $layer->setCurrentCategory($category);
+//     $attributes = $layer->getFilterableAttributes();
+
+    // foreach ($attributes as $attribute) {
+    //     if ($attribute->getAttributeCode() == 'price') {
+    //         $filterBlockName = 'catalog/layer_filter_price';
+    //     } elseif ($attribute->getBackendType() == 'decimal') {
+    //         $filterBlockName = 'catalog/layer_filter_decimal';
+    //     } else {
+    //         $filterBlockName = 'catalog/layer_filter_attribute';
+    //     }
+
+    //     $result = $this->getLayout()->createBlock($filterBlockName)->setLayer($layer)->setAttributeModel($attribute)->init();
+
+    //     foreach($result->getItems() as $option) {
+    //         echo $option->getLabel().'<br/>';
+    //         echo $option->getValue();
+    //     }
+    //     } 
+//print_r($op->getData());
+//print_r(get_class_methods($op));
+     // $category = $this->getData('current_category');
+
+?>

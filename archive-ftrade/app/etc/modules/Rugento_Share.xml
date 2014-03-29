@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) <2012>, <Rugento.ru>
+ * License URL http://www.rugento.ru/oferta.html
+*/
+-->
+<config>
+    <modules>
+        <Rugento_Share>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rugento_Share>
+    </modules>
+</config>

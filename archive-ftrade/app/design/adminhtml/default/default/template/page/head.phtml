@@ -1,0 +1,83 @@
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>"/>
+<title><?php echo htmlspecialchars(html_entity_decode($this->getTitle())) ?></title>
+<link rel="icon" href="<?php echo $this->getSkinUrl('favicon.ico') ?>" type="image/x-icon"/>
+<link rel="shortcut icon" href="<?php echo $this->getSkinUrl('favicon.ico') ?>" type="image/x-icon"/>
+
+<script type="text/javascript">
+    var BLANK_URL = '<?php echo $this->getJsUrl() ?>blank.html';
+    var BLANK_IMG = '<?php echo $this->getJsUrl() ?>spacer.gif';
+    var BASE_URL = '<?php echo $this->getUrl('*') ?>';
+    var SKIN_URL = '<?php echo $this->getSkinUrl() ?>';
+    var FORM_KEY = '<?php echo $this->getFormKey() ?>';
+</script>
+
+<?php echo $this->getCssJsHtml() ?>
+
+<?php if ($this->getCanLoadExtJs()): ?>
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL = BLANK_IMG;
+        Ext.UpdateManager.defaults.loadScripts = false;
+        Ext.UpdateManager.defaults.disableCaching = true;
+    </script>
+<?php endif; ?>
+
+<?php if ($this->getCanLoadTinyMce()): // TinyMCE is broken when loaded through index.php ?>
+    <script type="text/javascript" src="<?php echo $this->getJsUrl() ?>tiny_mce/tiny_mce.js"></script>
+<?php endif; ?>
+
+<script type="text/javascript">
+    Fieldset.addToPrefix(<?php echo Mage::helper('adminhtml')->getCurrentUserId() ?>);
+</script>
+
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getChildHtml('calendar'); ?>
+<?php echo $this->getChildHtml('optional_zip_countries'); ?>
+<!-- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+    $.noConflict();
+    jQuery(document).ready(function() {
+        setTimeout("start();", 1000);
+    });
+    var count = 0;
+function start() {
+	var start_load = jQuery('#loading-mask').css('display');
+	if(start_load=='none') {	   
+			
+	    jQuery('#group_462manufacturer_category').change(function() {
+	    	var attr_value = jQuery('#group_462manufacturer_category option:selected').val();
+	        jQuery.get('/getcategoryparam/index', {attr: attr_value}, function(response) {
+	            var obj = jQuery.parseJSON(response);	            
+	            jQuery('select[name=general\\[value_filter\\]] option').remove();
+	            obj.each(function(index) {	                		
+	                jQuery('select[name=general\\[value_filter\\]]').append(jQuery('<option>', { value : index.value }).text(index.label)); 
+	                //jQuery('#group_462value_filter').append('<option value="1">asdfasdf</option>');	                
+	            });
+
+	        });
+	    });
+	    setTimeout("start();", 1000);
+	} else {
+		count++;
+		var item = jQuery('#group_462manufacturer_category option:selected').val();				
+		setTimeout("updateselect();", 2000);
+		setTimeout("start();", 1000);
+	}
+}
+
+function updateselect() {	
+	var item = jQuery('#group_462manufacturer_category option:selected').val();	
+	jQuery.get('/getcategoryparam/index', {attr: item}, function(response) {
+	            var obj = jQuery.parseJSON(response);	            
+	            jQuery('select[name=general\\[value_filter\\]] option').remove();
+	            obj.each(function(index) {	                		
+	                jQuery('select[name=general\\[value_filter\\]]').append(jQuery('<option>', { value : index.value }).text(index.label)); 
+	                //jQuery('#group_462value_filter').append('<option value="1">asdfasdf</option>');	                
+	            });
+	            	var id_found = jQuery('input[name=general\\[id\\]]').val();	            		            	
+	            	jQuery.get('/getcategoryparam/index/getattr', {attr: item, category: id_found}, function(body) {
+	            		console.log(body);
+	            	});	
+	            	            
+	        });
+}
+</script> -->

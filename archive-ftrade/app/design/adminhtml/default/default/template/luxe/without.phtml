@@ -1,0 +1,21 @@
+<?php 
+$arrList = $this->getProducts(); 
+echo "<table border = 1 style = 'border-left: none;border-collapse: collapse'>";
+echo "<tr><td></td><td style = 'font-weight: bold;background: lightgrey;'>Наименование товара</td><td style = 'background: lightgrey'><b>ID</b></td><td style = 'font-weight: bold; background: lightgrey;'>Нет ни одного раздела</td></tr>";
+$i=0;
+foreach($arrList as $key){
+$i=$i+1;
+echo "<tr style = 'height: 20px;'><td>";
+echo $i."&nbsp;";
+echo "</td><td>";
+echo "&nbsp;".$key['name']."<br>";
+echo "</td><td>";
+echo "&nbsp;".$key['id']."&nbsp;";
+echo "</td><td style = 'text-align: center'>";
+echo "&nbsp;".$key['exist'];
+echo "</td></tr>";
+}
+echo "</table>";
+?>
+ 
+ 

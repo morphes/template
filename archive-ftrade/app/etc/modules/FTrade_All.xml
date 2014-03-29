@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<FTrade_Catalog>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_Catalog>
+		<FTrade_Captcha>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_Captcha>
+		<FTrade_Customer>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_Customer>
+		<FTrade_Directory>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_Directory>
+		<FTrade_Import>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_Import>
+		<FTrade_File>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_File>
+		<FTrade_OrderComment>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_OrderComment>
+		<FTrade_Sales>
+			<active>true</active>
+			<codePool>local</codePool>
+		</FTrade_Sales>
+	</modules>
+</config>

@@ -1,0 +1,44 @@
+<h3>Список товаров, выгруженных на Яндекс.Маркет:</h3>
+<font style = "font-size: 14px;">
+<?php 
+$arrList = $this->getBlockListYML(); 
+?>
+<form id = "delete-product-from-export"  action = "<?php echo $this->getUrl('ymlexport/for/deleteyandex') ?>">
+<?php
+echo "<table border = 1 style = 'border-left: none;border-collapse: collapse'>";
+echo "<tr><td></td><td style = 'font-weight: bold;background: lightgrey;'>Наименование товара</td><td style = 'background: lightgrey'><b>Sku</b></td><td style = 'font-weight: bold; background: lightgrey;'>Видимость</td><td style = 'background: lightgrey; font-weight: bold;'>Категория товара</td><td style = 'background: lightgrey'><b>&nbsp;Удалить&nbsp;</b></td></tr>";
+$i=0;
+foreach($arrList as $key){
+$i=$i+1;
+echo "<tr style = 'height: 20px;'><td>";
+echo $i."&nbsp;";
+echo "</td><td>";
+echo "&nbsp;".$key['id']."<br>";
+echo "</td><td>";
+echo "&nbsp;".$key['sku']."&nbsp;";
+echo "</td><td style = 'text-align: center'>";
+echo "&nbsp;";
+switch($key['visibility']) {
+case 1: echo "<font style = 'color: red'>Нигде</font>";
+		break;
+case 2: echo "Каталог";
+		break;
+case 3: echo "Поиск";
+		break;
+case 4: echo "Каталог, Поиск";
+		break;
+}
+echo "&nbsp;";
+echo "</td><td>";
+echo "&nbsp;".$key['category'];	
+echo "</td><td style = 'text-align: center'>";
+echo "&nbsp;<input type = 'checkbox' name = 'check".$i."' value = '".$key['product_id']."' ></input>&nbsp;";
+echo "</td></tr>";
+
+}
+echo "</table>";
+?>
+<br>
+<input type = "submit" value = "Удалить"/>
+</font>
+</form>

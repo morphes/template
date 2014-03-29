@@ -1,0 +1,18 @@
+
+.slider_wrapper { behavior:url(js/PIE.htc); position:relative;}
+.camera_wrap .camera_pag .camera_pag_ul li:first-child {
+	margin-left: 4px;
+}
+.socials a {
+	filter: alpha(opacity=29);
+}
+
+.socials a:hover {
+	filter: alpha(opacity=100);
+}
+
+.prev1:hover, 
+.next1:hover {
+	filter: alpha(opacity=40);
+	
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) <2013>, <Rugento.ru>
+ * License URL http://www.rugento.ru/oferta.html
+ * Support URL http://support.rugento.ru
+ * Support EMAIL support@rugento.ru
+ */
+-->
+<config>
+    <modules>
+        <Rugento_Ymlpro>
+            <version>4.1.5</version>
+        </Rugento_Ymlpro>
+    </modules>
+    <global>
+        <models>
+            <ymlpro>
+                <class>Rugento_Ymlpro_Model</class>
+            </ymlpro>
+        </models>
+        <resources>
+            <ymlpro_setup>
+                <setup>
+                    <module>Rugento_Ymlpro</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </ymlpro_setup>
+            <ymlpro_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </ymlpro_write>
+            <ymlpro_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </ymlpro_read>
+        </resources>
+        <helpers>
+            <ymlpro>
+                <class>Rugento_Ymlpro_Helper</class>
+            </ymlpro>
+        </helpers>
+         <blocks>
+            <ymlpro>
+                <class>Rugento_Ymlpro_Block</class>
+            </ymlpro>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <ymlpro>
+                <use>standard</use>
+                <args>
+                    <module>Rugento_Ymlpro</module>
+                    <frontName>yml</frontName>
+                </args>
+            </ymlpro>
+        </routers>
+        <events>
+            <rugento_yml_product_before>
+                <observers>
+                    <rugento_yml_product_before>
+                        <class>Rugento_Ymlpro_Model_Observer</class>
+                        <method>createSubProduct</method>
+                    </rugento_yml_product_before>
+                </observers>
+            </rugento_yml_product_before>
+        </events>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Rugento_Ymlpro>
+                    <files>
+                        <Rugento_Ymlpro>Rugento_Ymlpro.csv</Rugento_Ymlpro>
+                    </files>
+                </Rugento_Ymlpro>
+            </modules>
+        </translate>
+         <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <rugento_ymlpro>
+                                              <title>&#x42F;&#x43D;&#x434;&#x435;&#x43A;&#x441;.&#x41C;&#x430;&#x440;&#x43A;&#x435;&#x442; PRO</title>
+                                        </rugento_ymlpro>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

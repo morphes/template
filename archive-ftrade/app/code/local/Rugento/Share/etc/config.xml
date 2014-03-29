@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) <2012>, <Rugento.ru>
+ * License URL http://www.rugento.ru/oferta.html
+*/
+-->
+<config>
+    <modules>
+        <Rugento_Share>
+            <version>0.1.0</version>
+        </Rugento_Share>
+    </modules>
+    <global>
+        <models>
+            <rugentoshare>
+                <class>Rugento_Share_Model</class>
+            </rugentoshare>
+        </models>
+        <blocks>
+            <rugentoshare>
+                <class>Rugento_Share_Block</class>
+            </rugentoshare>
+        </blocks>
+        <helpers>
+            <rugentoshare>
+                <class>Rugento_Share_Helper</class>
+            </rugentoshare>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <rugento_yml_product_xml_out>
+                <observers>
+                    <rugento_yml_product_xml_out>
+                        <class>Rugento_Share_Model_Observer</class>
+                        <method>fixDescription</method>
+                    </rugento_yml_product_xml_out>
+                </observers>
+            </rugento_yml_product_xml_out>
+        </events>
+        <routers>
+            <rugentoshare>
+                <use>standard</use>
+                <args>
+                    <module>Rugento_Share</module>
+                    <frontName>share</frontName>
+                </args>
+            </rugentoshare>
+        </routers>
+    </frontend>
+</config>

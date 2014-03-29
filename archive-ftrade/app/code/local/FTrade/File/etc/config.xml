@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FTrade_File>
+            <version>1.0.0</version>
+        </FTrade_File>
+    </modules>
+    <frontend>
+        <routers>
+            <file>
+                <use>standard</use>
+                <args>
+                    <module>FTrade_File</module>
+                    <frontName>file</frontName>
+                </args>
+            </file>
+        </routers>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <FTrade_File before="Mage_Adminhtml">FTrade_File_Adminhtml</FTrade_File>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

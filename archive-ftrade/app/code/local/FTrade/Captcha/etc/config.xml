@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <events>
+            <controller_action_predispatch_contacts_index_post>
+                <observers>
+                    <captcha>
+                        <class>FTrade_Captcha_Model_Observer</class>
+                        <method>checkContactForm</method>
+                    </captcha>
+                </observers>
+            </controller_action_predispatch_contacts_index_post>
+        </events>
+    </global>
+    <default>
+        <customer>
+            <captcha>
+                <always_for>
+                    <contact_form>1</contact_form>
+                </always_for>
+            </captcha>
+        </customer>
+        <captcha>
+            <frontend>
+                <areas>
+                    <contact_form>
+                        <label>Contacts</label>
+                    </contact_form>
+                </areas>
+            </frontend>
+        </captcha>
+    </default>
+</config>

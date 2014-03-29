@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd"><name>ASchroder_SMTPPro</name><channel>connect.magentocommerce.com/community</channel><summary>Full SMTP, Gmail and Google apps email support for Magento. Free and open source.</summary><description>This extension is now the combination of my SMTP Pro extension and the Gmail + Google Apps extension.&#13;
+&#13;
+For SMTP it handles everything from SMTP server authentication with MD5-CRAM to TLS and SSL connections.&#13;
+&#13;
+For Google Apps and Gmail it offers the same stupidly simple setup as always.&#13;
+&#13;
+The extension itself now supports several new features, such as suppressing emails and sending development mode emails to a single inbox, sending from multiple different gmail/google accounts and now email logging.</description><lead><name>Ashley Schroder</name><user>ashleys22</user><email>ashley.schroder@gmail.com</email><active>yes</active></lead><date>2011-03-20</date><time>04:24:33</time><version><release>1.4.3</release><api>1.4.3</api></version><stability><release>stable</release><api>stable</api></stability><license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license><notes>1.4.3 - Added Amazon SES support, experimental only&#13;
+&#13;
+1.4.2 - Updated Email_Template to work with Magento 1.5.&#13;
+&#13;
+1.4.1 - Missed one place where a non-standard basedir will trip up the self test and add extra exception logging.&#13;
+&#13;
+1.4.0 - several bug fixes and update to support Magento 1.4.2&#13;
+&#13;
+1.3.3 - For the love of god Magento Connect - please let me upload this!&#13;
+&#13;
+1.3.2 - For the love of god Magento Connect - please let me upload this!&#13;
+&#13;
+1.3.1 - bug fix for the Observer.php include.&#13;
+&#13;
+1.3 - add test of _actual email sending and add From: header on test email (fixes an issue for some SMTP servers)&#13;
+&#13;
+1.1.1 - Bug fix release&#13;
+&#13;
+1.1.0 - Added email logging and event firing&#13;
+&#13;
+1.0.4 - No changes, just adding a new point release in the hope that magento connect will work...&#13;
+&#13;
+1.0.3 - No changes, just adding a new point release in the hope that magento connect will work...&#13;
+&#13;
+1.0.2 - Add support for multiple gmail or Google Apps accounts to address the 500 email limit Google imposes.&#13;
+&#13;
+1.0.1 - Re release of the SMTP Pro extension as a combined SMTP + Google apps/Gmail extension.</notes><contents><dir name="/"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="smtppro"><file name="view.phtml" md5sum="fd22a77c5754913bac050923bff57d95" role="magedesign"/></dir></dir></dir></dir></dir><dir name="Aschroder"><dir name="SMTPPro"><dir name="Block"><dir name="Adminhtml"><file name="Test.php" md5sum="0d0ff50fe926cd5704426d5a7b255176" role="magecommunity"/></dir><dir name="Log"><file name="Grid.php" md5sum="2f04731eeeb9d821857fccda014a6d84" role="magecommunity"/><file name="View.php" md5sum="396702d55673f05961cf646525212534" role="magecommunity"/></dir><file name="Log.php" md5sum="d2a7233ec0fd3f20d048f3dd412f61a3" role="magecommunity"/></dir><dir name="Helper"><file name="Data.php" md5sum="e4ebefdc54df5e440caafa6365534624" role="magecommunity"/></dir><dir name="Model"><dir name="Email"><file name="Log.php" md5sum="c05dcbe851684410e0cbcfed6cc914cd" role="magecommunity"/><file name="Template.php" md5sum="a234cf2f9fa7d4b9a0e83c52e46e3d0f" role="magecommunity"/></dir><file name="Email.php" md5sum="043689ad6ac3bfa6c96739596126fd20" role="magecommunity"/><dir name="Mysql4"><dir name="Email"><dir name="Log"><file name="Collection.php" md5sum="8ca40c787081eb19f665e8033bfd5025" role="magecommunity"/></dir><file name="Log.php" md5sum="c8331530a6744b42c52beaf0e714fddd" role="magecommunity"/></dir><file name="Setup.php" md5sum="a1f73ffd26ddd42a9789b071a40b2450" role="magecommunity"/></dir><dir name="Newsletter"><file name="Template.php" md5sum="b38356df77253bd116ee5b6f6c59b223" role="magecommunity"/></dir><file name="Observer.php" md5sum="a9df4366354e355bfdb1476720610331" role="magecommunity"/><dir name="System"><dir name="Config"><dir name="Source"><dir name="Smtp"><file name="Authentication.php" md5sum="2e871d8a7a4beaff99c818a51fb38344" role="magecommunity"/><file name="Development.php" md5sum="2f9b6177e6063c2d42483c9af65995d3" role="magecommunity"/><file name="Option.php" md5sum="a4335eb0c2bc92c6a3356dd62fc568ff" role="magecommunity"/><file name="Ssl.php" md5sum="ae9af390a40b8bcebbc8451a9152821f" role="magecommunity"/></dir></dir></dir></dir></dir><dir name="controllers"><file name="IndexController.php" md5sum="63dcb8c38abd84e4996abb49e6b5d543" role="magecommunity"/><file name="LogController.php" md5sum="b6819bb30738db7416ca241303e5b1fd" role="magecommunity"/></dir><dir name="etc"><file name="config.xml" md5sum="512a199b1e4092c9051582afa648cce2" role="magecommunity"/><file name="system.xml" md5sum="9f4b9a8f2e59de0b3fd6b28c9a49b1d7" role="magecommunity"/></dir><dir name="lib"><file name="AmazonSES.php" md5sum="64e65ec97f0f2e3e72d132ed612fb858" role="magecommunity"/></dir><dir name="locale"><dir name="de_DE"><file name="Aschroder_SMTPPro.csv" md5sum="5b2e576a73cc62cfaf3ffc61d5149bb8" role="magecommunity"/></dir></dir><dir name="modules"><file name="Aschroder_SMTPPro.xml" md5sum="8a4e6872dd721b6bd17bce8b1cb11769" role="magecommunity"/></dir><dir name="sql"><dir name="smtppro_setup"><file name="mysql4-install-1.1.0.php" md5sum="5c13c266d15ce411658ae616c3e41e63" role="magecommunity"/></dir></dir><dir name="templates"><dir name="adminhtml"><dir name="base"><dir name="default"><dir name="template"><dir name="smtppro"><file name="view.phtml" md5sum="fd22a77c5754913bac050923bff57d95" role="magecommunity"/></dir></dir></dir></dir></dir></dir></dir></dir><dir name="modules"><file name="Aschroder_SMTPPro.xml" md5sum="8a4e6872dd721b6bd17bce8b1cb11769" role="mageetc"/></dir><dir name="de_DE"><file name="Aschroder_SMTPPro.csv" md5sum="5b2e576a73cc62cfaf3ffc61d5149bb8" role="magelocale"/></dir></dir></contents><dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><pearinstaller><min>1.6.2</min></pearinstaller></required></dependencies><phprelease/></package>

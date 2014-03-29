@@ -1,0 +1,177 @@
+<link href="/admin/include/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/admin/include/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/admin/include/js/jquery.ui.datepicker-ru.js"></script>
+
+{literal}
+<script type="text/javascript">
+    $(document).ready(function() {
+    $("#date_from, #date_to").datepicker({
+    regional: $.datepicker.regional['ru'],
+            showOn: 'button',
+            dateFormat: 'yy-mm-dd',
+            buttonImage: '/admin/images/icons/calendar.gif',
+            buttonImageOnly: true
+    });
+    });
+            function sortBy (sort_field) {
+            var date_from = '', date_to = '';
+                    if ($("#date_from").val()) {
+            date_from = '&date_from=' + $("#date_from").val();
+            }
+            if ($("#date_to").val()) {
+            date_to = '&date_to=' + $("#date_to").val();
+            }
+            href = '/admin/statistic.php?sortby=' + sort_field + date_from + date_to;
+                    location.href = href;
+                    }
+
+    $(function(){
+    $("#accordion").accordion({
+    autoHeight: false
+    });
+            });</script>
+
+<style type="text/css">
+    .field {
+        padding: 0px;
+    }
+    .fieldth {
+        padding: 0px 4px 0px 4px;
+    }
+</style>
+{/literal}
+
+<div class="statistic-data">
+    <form name="statistic">
+        <table cellpadding="0" cellspacing="0"  width=80%>
+            {if $rights.profiles_top_control}
+            <tr>
+                <td colspan=8 style="padding-bottom:20px;padding-left:25px">
+                    <input type="text" id="date_from" name="date_from" value="{$date_from}" style="width:90px">
+                    ...
+                    <input type="text" id="date_to" name="date_to" value="{$date_to}" style="width:90px">
+                    <input type="submit"  name="sub" value="OK">
+                </td>
+            </tr>
+            {/if}
+        </table>
+        <div id="accordion">
+
+            {foreach from=$stats item=st key=key name=stats}
+            <h3>
+                <a href="#">
+                    <table>
+                        <tr>
+                            <td class="fieldth"><h3><nobr>ФИО</h3></td>
+                            <td class="fieldth"><h3><nobr>Всего</h3></td>
+                            <td class="fieldth"><h3><nobr>Прозвонены</h3></td>
+                            <td class="fieldth"><h3><nobr>Прозвонены %</h3></td>
+                            <td class="fieldth"><h3><nobr>Фото</h3></td>
+                            <td class="fieldth"><h3><nobr>Фото %</h3></td>
+                            <td class="fieldth"><h3><nobr>Клиенты</h3></td>
+                            {if $rights.profiles_top_control}
+                            <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("contacts{if $sortby=='contacts'}_desc{/if}");'>Просмотр контактов</a></h3></td>
+                            {/if}
+
+                            <td class="fieldth" align="center">
+                                <h3>Договоры<br>
+                                    А&nbsp;/М&nbsp;/О{if !$rights.profiles_agent}&nbsp;/З
+                                </h3></td>
+                            {/if}
+                        </tr>
+                        <tr>
+                            <td class="field" width=120px>{$st.name}</td>
+                            <td align="center" class="field" width=75px>{$st.all.activobj}</td>
+                            <td align="center" class="field" width=75px>{$st.all.callobj}</td>
+                            <td align="center" class="field" width=75px>{$st.all.callobjper}</td>
+                            <td align="center" class="field" width=75px>{$st.all.fotoobj}</td>
+                            <td align="center" class="field" width=75px>{$st.all.fotoobjper}</td>
+                            <td align="center" class="field" width=75px>{$st.all.clients}</td>
+                            {if $rights.profiles_top_control}
+                            <td align="center" style="padding: 15; margin: 0;" width=75px>{$st.all.contacts}</td>
+                            {/if}
+                            <td align="center" class="field" width=150px>{$st.all.contagent} / {$st.all.contmanager} / {$st.all.contcomplete}{if !$rights.profiles_agent} / {$st.all.contdeposit}{/if}</td>
+                        </tr>
+                    </table>
+                </a></h3>
+            <div>
+                <table cellpadding="0" cellspacing="0"  width=80% class="table">
+                    <tr>
+                        <td class="fieldth"><h3>Номер</h3></td>
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("name{if $sortby=='name'}_desc{/if}");'>ФИО</a></h3></td>
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("activobj{if $sortby=='activobj'}_desc{/if}");'>Всего</a></h3></td>
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("callobj{if $sortby=='callobj'}_desc{/if}");'>Прозвонены</a></h3></td>
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("callobjper{if $sortby=='callobjper'}_desc{/if}");'>Прозвонены %</a></h3></td>
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("fotoobj{if $sortby=='fotoobj'}_desc{/if}");'>Фото</a></h3></td>
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("fotoobjper{if $sortby=='fotoobjper'}_desc{/if}");'>Фото %</a></h3></td>
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("clients{if $sortby=='clients'}_desc{/if}");'>Клиенты</a></h3></td>
+                        {if $rights.profiles_top_control}
+                        <td class="fieldth"><h3><nobr><a href="javascript: void(0);" onclick='sortBy("contacts{if $sortby=='contacts'}_desc{/if}");'>Просмотр контактов</a></h3></td>
+                        {/if}
+
+                        <td class="fieldth" align="center">
+                            <h3>Договоры<br>
+                                <a href="javascript: void(0);" onclick='sortBy("contagent{if $sortby=='contagent'}_desc{/if}");'>А</a>&nbsp;/
+                                <a href="javascript: void(0);" onclick='sortBy("contmanager{if $sortby=='contmanager'}_desc{/if}");'>М</a>&nbsp;/
+                                <a href="javascript: void(0);" onclick='sortBy("contcomplete{if $sortby=='contcomplete'}_desc{/if}");'>О</a>
+                                {if !$rights.profiles_agent}
+                                &nbsp;/
+                                <a href="javascript: void(0);" onclick='sortBy("contdeposit{if $sortby=='contdeposit'}_desc{/if}");'>З</a>
+                            </h3></td>
+                        {/if}
+                    </tr>
+
+                    {foreach from=$st.ags item=s key=k name=st}
+                    <tr>
+                        <td class="field"><a href="workers_show.php?id={$s.id}">{$s.id}</a></td>
+                        <td class="field">{$s.name}</td>
+                        <td align="center" class="field">{$s.activobj}</td>
+                        <td align="center" class="field">{$s.callobj}</td>
+                        <td align="center" class="field">{$s.callobjper}</td>
+                        <td align="center" class="field">{$s.fotoobj}</td>
+                        <td align="center" class="field">{$s.fotoobjper}</td>
+                        <td align="center" class="field">{$s.clients}</td>
+                        {if $rights.profiles_top_control}
+                        <td align="center" style="padding: 15; margin: 0;">
+                            <a class="iframe_get_contacts" href="/admin/statistic_get_contacts.php?user_id={$s.id}{if $date_from}&date_from={$date_from}{/if}{if $date_to}&date_to={$date_to}{/if}">{$s.contacts}</a>
+                        </td>
+                        {/if}
+                        <td align="center" class="field">{$s.contagent} / {$s.contmanager} / {$s.contcomplete}{if !$rights.profiles_agent} / {$s.contdeposit}{/if}</td>
+                    </tr>
+                    {/foreach}
+
+
+                    <tr>
+                        <td class="field"></td>
+                        <td class="field">{$st.all.name}</td>
+                        <td align="center" class="field">{$st.all.activobj}</td>
+                        <td align="center" class="field">{$st.all.callobj}</td>
+                        <td align="center" class="field">{$st.all.callobjper}</td>
+                        <td align="center" class="field">{$st.all.fotoobj}</td>
+                        <td align="center" class="field">{$st.all.fotoobjper}</td>
+                        <td align="center" class="field">{$st.all.clients}</td>
+                        {if $rights.profiles_top_control}
+                        <td align="center" style="padding: 15; margin: 0;">{$st.all.contacts}</td>
+                        {/if}
+                        <td align="center" class="field">{$st.all.contagent} / {$st.all.contmanager} / {$st.all.contcomplete}{if !$rights.profiles_agent} / {$st.all.contdeposit}{/if}</td>
+                    </tr>
+                </table>
+            </div>
+            {/foreach}
+            <!--{foreach from=$statistic item=s key=key name=statistic}
+                    <tr>
+                    <td class="field"><a href="workers_show.php?id={$s.id}">{$s.id}</a></td>
+                    <td class="field">{$s.name}</td>
+                    <td align="center" class="field">{$s.activobj}</td>
+                    <td align="center" class="field">{$s.callobj}</td>
+                    <td align="center" class="field">{$s.callobjper}</td>
+                    <td align="center" class="field">{$s.fotoobj}</td>
+                    <td align="center" class="field">{$s.fotoobjper}</td>
+                    {if $rights.profiles_top_control}
+                    <td align="center" style="padding: 15; margin: 0;">{$s.contacts}</td>
+                    {/if}
+                    <td align="center" class="field">{$s.contagent} / {$s.contmanager} / {$s.contcomplete}</td>
+            </tr>
+            {/foreach}-->
+    </form>
+</div>

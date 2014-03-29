@@ -1,0 +1,33 @@
+<?php 
+$link = '';
+$checked = '';
+$_current_category = Mage::registry('current_category');
+$id_this_cat = $_current_category->getEntityId();
+$category = Mage::getModel('catalog/category')->load($id_this_cat);
+
+if($category->getIsPage()=='1') {
+    if($category->getCatalogAttrValue()==$this->getValue())
+	$checked = 'checked';
+}
+$subcats = $category->getChildren();
+
+foreach(explode(',',$subcats) as $subCatid)
+{
+  $_category = Mage::getModel('catalog/category')->load($subCatid);    
+  if($_category->getCatalogAttrValue()==$this->getValue()) {
+	  if($_category->getIsPage()=='1')
+	  {
+	    $link     = $_category->getURL();
+	    $catname     = $_category->getName();
+	  } 
+}
+}
+?>
+
+
+<input type="checkbox" class="nav-checkbox" name="<?php echo $this->getHtmlName();?>" id="<?php echo $this->getHtmlName()?>" <?php echo $this->getHtmlChecked();?> value="<?php echo $this->getValue()?>" <?php echo $checked; ?>/>
+<?php if($link!='') { ?>
+	<a href="<?php echo $link; ?>"><span class="<?php echo $this->getHtmlDisabled()?>" for="<?php echo $this->getHtmlName();?>"><?php echo $this->getLabel()?></span></a>
+<?php } else { ?>
+	<span class="<?php echo $this->getHtmlDisabled()?>" for="<?php echo $this->getHtmlName();?>"><?php echo $this->getLabel()?></span>
+<?php } ?>

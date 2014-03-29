@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_sales_order_view>
+        <reference name="order_info">
+            <block type="adminhtml/sales_order_view_info" name="order_info_custom" template="ftrade/sales/order/view/custom.phtml"></block>
+            <action method="setTemplate">
+                <template>ftrade/sales/order/view/info.phtml</template>
+            </action>
+        </reference>
+    </adminhtml_sales_order_view>
+</layout>

@@ -1,0 +1,37 @@
+<?php
+    $_order = $this->getOrder();
+    
+    $favoriteCarrier = $_order->getFavoriteCarrier();
+    $customerComment = $_order->getCustomerNote();
+    $companyDetailsFile = $_order->getBillingAddress()->getCompanyDetailsFileUrl();
+?>
+
+<?php if (!empty($favoriteCarrier) || !empty($customerComment) || !empty($companyDetailsFile)): ?>
+<div class="order-info-box">
+    <div class="box">
+        <div class="box-title">
+            <h2><?php echo $this->__('Additional info') ?></h2>
+        </div>
+        <div class="box-content">
+            <?php if (!empty($favoriteCarrier)): ?>
+            <p>
+                <strong><?php echo $this->__('Favorite carrier:') ?></strong>
+                <?php echo $favoriteCarrier ?>
+            </p>
+            <?php endif; ?>
+
+            <?php if (!empty($customerComment)): ?>
+            <p>
+                <strong><?php echo $this->__('Customer order comment:') ?></strong>
+                <?php echo $customerComment ?>
+            </p>
+            <?php endif; ?>
+
+            <?php if (!empty($companyDetailsFile)): ?>
+                <strong><?php echo $this->__('Attached company details file:') ?></strong>
+                <a href="<?php echo $companyDetailsFile ?>"><?php echo $this->__('Download') ?></a>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

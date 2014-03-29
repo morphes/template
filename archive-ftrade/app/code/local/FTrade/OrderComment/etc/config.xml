@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FTrade_OrderComment>
+            <version>1.0.0</version>
+        </FTrade_OrderComment>
+    </modules>
+    <frontend>
+        <events>
+            <checkout_type_onepage_save_order>
+                <observers>
+                    <FTrade_OrderComment>
+                        <class>FTrade_OrderComment_Model_Observer</class>
+                        <method>addOrderComment</method>
+                    </FTrade_OrderComment>
+                </observers>
+            </checkout_type_onepage_save_order>
+        </events>
+    </frontend>
+</config>

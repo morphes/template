@@ -1,0 +1,42 @@
+<?php
+    $_order = $this->getOrder();
+    
+    $favoriteCarrier = $_order->getFavoriteCarrier();
+    $customerComment = $_order->getCustomerNote();
+    $companyDetailsFile = $_order->getBillingAddress()->getCompanyDetailsFile();
+?>
+
+<?php if (!empty($favoriteCarrier) || !empty($customerComment) || !empty($companyDetailsFile)): ?>
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4><?php echo Mage::helper('sales')->__('Additional info') ?></h4>
+    </div>
+    <div class="fieldset">
+        <?php if (!empty($favoriteCarrier)): ?>
+        <p>
+            <strong><?php echo Mage::helper('sales')->__('Favorite carrier:') ?></strong>
+            <?php echo $favoriteCarrier ?>
+        </p>
+        <?php endif; ?>
+        
+        <?php if (!empty($customerComment)): ?>
+        <p>
+            <strong><?php echo Mage::helper('sales')->__('Customer order comment:') ?></strong>
+            <?php echo $customerComment ?>
+        </p>
+        <?php endif; ?>
+
+        <?php if (!empty($companyDetailsFile)): ?>
+        <?php
+            $url = Mage::helper('adminhtml')->getUrl('adminhtml/customer/viewfile', array(
+                'file'      => Mage::helper('core')->urlEncode($companyDetailsFile),
+            ));
+        ?>
+        <a href="<?php echo $url ?>">
+            <?php echo Mage::helper('sales')->__('Download file with company details') ?>
+            (<?php echo $this->escapeHtml(basename($companyDetailsFile)) ?>)
+        </a>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FTrade_Import>
+            <version>1.0.0</version>
+        </FTrade_Import>
+    </modules>
+    <global>
+         <models>
+            <import>
+                <class>FTrade_Import_Model</class>
+            </import>
+         </models>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <FTrade_Import before="Mage_ImportExport_Adminhtml">FTrade_Import_Adminhtml</FTrade_Import>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <FTrade_Import>
+                    <files>
+                        <default>FTrade_Import.csv</default>
+                    </files>
+                </FTrade_Import>
+            </modules>
+        </translate>
+		<menu>
+            <system>
+                <children>
+                    <convert>
+                        <children>
+                            <from1c translate="title" module="importexport">
+                                <title>Import from 1C</title>
+                                <action>adminhtml/import/from1c</action>
+                                <sort_order>20</sort_order>
+                            </from1c>
+                        </children>
+                    </convert>
+                </children>
+            </system>
+        </menu>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <convert>
+                                    <children>
+                                        <from1c translate="title">
+                                            <title>Import from 1C</title>
+                                            <sort_order>20</sort_order>
+                                        </from1c>
+                                    </children>
+                                </convert>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

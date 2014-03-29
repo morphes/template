@@ -1,0 +1,172 @@
+<?php 
+    $_current_category = Mage::registry('current_category');
+    $id_this_cat = $_current_category->getEntityId();
+    $parentId = $_current_category->getParentId();
+    $category = Mage::getModel('catalog/category')->load($id_this_cat);
+    if ($category->getIsPage() != '1') {
+?>
+
+<?php if ($this->canShowBlock()): ?>
+    <div class="box block layered-nav advanced-navigation">
+        <div class="block-title">
+            <strong><span><?php echo $this->__('Shop By') ?></span></strong>
+        </div>
+        <div class="block-content">
+            <?php if ($this->canShowOptions()): ?>
+                <div class="narrow-by">
+                    <?php foreach ($this->getFilters() as $_filter): ?>
+                        <?php echo $_filter->getHtml(); ?>
+                    <?php endforeach; ?>
+                    <input type="hidden" id="currentCategoryId" name="cat" value="<?php echo $this->getCurrentCategoryId(); ?>" />
+                </div>
+            <?php endif; ?>
+            <a href="#" class="nav-a-link nav-bottom-link"><?php echo $this->__('Show All Results'); ?></a>
+        </div>
+        <div id="nav-link" class="af-link-pos-<?php echo $this->getPosition(); ?>"><span class="af-search-a"></span><?php echo $this->__('Find'); ?> <span id="nav-link-count"></span> <span id="af-plural"></span> &nbsp;<a class="nav-a-link" href="#"><?php echo $this->__('Show'); ?></a></div>
+    </div>
+<?php endif; ?>
+<?php } else { ?>
+<?php
+$layer = Mage::getModel("catalog/layer");
+
+$category = Mage::getModel("catalog/category")->load($parentId);
+$layer->setCurrentCategory($category);
+$attributes = $layer->getFilterableAttributes();
+?>
+
+
+
+<?php if ($this->canShowBlock()): ?>
+    <div class="box block layered-nav advanced-navigation">
+        <div class="block-title">
+            <strong><span><?php echo $this->__('Shop By') ?></span></strong>
+        </div>
+        <div class="block-content">
+                <?php if ($this->canShowOptions()): ?>
+                <div class="narrow-by">
+                    <?php foreach ($attributes as $attribute) { ?>
+                        <?php
+                        if ($attribute->getAttributeCode() == 'price') {
+                            $filterBlockName = 'catalog/layer_filter_price';
+                        } elseif ($attribute->getBackendType() == 'decimal') {
+                            $filterBlockName = 'catalog/layer_filter_decimal';
+                        } else {
+                            $filterBlockName = 'catalog/layer_filter_attribute';
+                        }
+
+                        $result = $this->getLayout()->createBlock($filterBlockName)->setLayer($layer)->setAttributeModel($attribute)->init();
+                        ?>
+<?php 
+$attr_view = $attribute->getData();
+?>
+                                <?php if ($result->getItemsCount() || count($result->getValues())): ?>
+                            <div class="filter-<?php echo $attr_view['attribute_code'] ?>">
+                                <div class="filter-name">
+                                    <span id="filter-<?php echo $result['attribute_code'] ?>" class="<?php if ($result->getIsHidden()) : ?>filter-hidden-value<?php endif ?>"><?php echo $result->__($result->getName()); ?></span>
+                                    <?php if (trim(strlen($result->getNote()))): ?>
+                                        <span class="filter-note" title="<?php echo $result->getNote(); ?>"></span>
+                                    <?php endif; ?>
+                <?php if ($result->getShowCount()): ?>
+                                        <span id="show-count-<?php echo $attr_view['attribute_code'] ?>" class="show-count-filter"><?php echo $result->__('Show All'); ?></span>
+                <?php endif; ?> 
+                                </div>
+                                <div class="clearer"></div>
+                                <div class="filter-values <?php if ($result->getViewAll()): ?>af-arrow-ud<?php endif; ?>" 
+                                    id="filter-<?php echo $attr_view['attribute_code'] ?>-value">
+                                    <ol class="attribute-filter-values <?php if ($result->getIsHidden()) : ?><?php if (!$result->getViewAll()): ?>no-display<?php endif; ?> a-fsliderclass<?php endif ?>" id="<?php echo $attr_view['attribute_code']; ?>">
+                                                <?php $i = 0; ?>                
+                                                <?php foreach ($result->getItems() as $_item): 
+
+                                                ?>
+                                                        <?php if ($i == $result->getShowCount() && $i/* && $this->getViewAll() */): ?>
+                                                <li><ul id="show-count-<?php echo $result->getVar() ?>-value" class="<?php if (!$result->getIsHidden()) : ?><?php if (!$result->getViewAll()): ?>no-display<?php endif; ?> a-fsliderclass<?php endif; ?>">
+                                                        <?php endif; ?> 
+                                                    <li>
+                                                        <?php
+                                                        $link = '';
+                                                        $checked = '';
+                                                        
+                                                        
+                                                        $category = Mage::getModel('catalog/category')->load($parentId);
+
+                                                        // if ($category->getIsPage() == '1') {
+                                                        //     if ($category->getCatalogAttrValue() == $_item->getValue()) {
+                                                        //         $checked = 'checked';
+                                                        //     }                                                            
+                                                        // }
+                                                        $subcats = $category->getChildren();
+
+                                                        foreach (explode(',', $subcats) as $subCatid) {
+                                                            $_category = Mage::getModel('catalog/category')->load($subCatid);
+                                                            if ($_category->getCatalogAttrValue() == $_item->getValue()) {
+                                                                if ($_category->getIsPage() == '1') {
+                                                                    $link = $_category->getURL();
+                                                                    $catname = $_category->getName();
+                                                                    $currentUrl = Mage::helper('core/url')->getCurrentUrl();                             
+                                                                    if($currentUrl==$link) {
+                                                                        $checked = 'checked';
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        ?>
+
+
+                                                        <input type="checkbox" class="nav-checkbox" name="
+                                                        <?php echo $attr_view['attribute_code'].'-'.$_item->getValue(); ?>" id="<?php echo $attr_view['attribute_code'].'-'.$_item->getValue(); ?>" <?php echo $_item->getHtmlChecked(); ?> value="<?php echo $_item->getValue() ?>" <?php echo $checked; ?>/>
+                                                        <?php if ($link != '') { ?>
+                                                            <a href="<?php echo $link; ?>"><span class="<?php echo $_item->getHtmlDisabled() ?>" for="<?php echo $_item->getHtmlName(); ?>"><?php echo $_item->getLabel() ?></span></a>
+                                                        <?php } else { ?>
+                                                            <span class="<?php echo $_item->getHtmlDisabled() ?>" for="<?php echo $_item->getHtmlName(); ?>"><?php echo $_item->getLabel() ?></span>
+                                                    <?php } ?>
+                                                    </li>         
+                                                    <?php $i++; ?>
+                                                <?php endforeach ?>
+                                        <?php if ($result->getShowCount()/* && $this->getViewAll() */): ?>
+                                                </ul></li>
+                <?php endif; ?>        
+                                    </ol>
+                                    <p class="af-bottom-filter"><?php if ($result->getIsHidden() || $result->getShowCount()) : ?><span class="filter-hidden-value-arrow"></span><?php endif ?></p>
+                                </div>
+                            </div>
+                <?php if ($result->getViewAll()): ?>
+                                <script type="text/javascript">
+                                    jQuery('#show-count-<?php echo $this->getVar() ?>').html('<?php echo $this->__('Hide All'); ?>');
+                                </script>
+                            <?php endif; ?>
+            <?php endif; ?>
+
+
+
+
+
+
+
+        <?php } ?>
+                    <input type="hidden" id="currentCategoryId" name="cat" value="<?php echo $parentId; ?>" />
+                </div>
+    <?php endif; ?>
+            <a href="#" class="nav-a-link nav-bottom-link"><?php echo $this->__('Show All Results'); ?></a>
+        </div>
+        <div id="nav-link" class="af-link-pos-<?php echo $this->getPosition(); ?>"><span class="af-search-a"></span><?php echo $this->__('Find'); ?> <span id="nav-link-count"></span> <span id="af-plural"></span> &nbsp;<a class="nav-a-link" href="#"><?php echo $this->__('Show'); ?></a></div>
+    </div>
+<?php endif; ?>
+
+
+<?php } ?>
+
+<script type="text/javascript">
+<?php if ($this->getPosition() == 'left'): ?>
+        var xleft = -jQuery('div.advanced-navigation').outerWidth(true) + 1; //XXX offset right
+<?php else : ?>
+        var xleft = jQuery('#nav-link').outerWidth(true); //XXX offset left
+<?php endif; ?>
+    var layerurl = '<?php echo $this->getAjaxUrl(); ?>';
+    var layshow = '<?php echo $this->__('Show All'); ?>';
+    var layhide = '<?php echo $this->__('Hide All'); ?>';
+    var afone = '<?php echo $this->__('One Product'); ?>';
+    var aftwo = '<?php echo $this->__('Two Product'); ?>';
+    var affri = '<?php echo $this->__('Fri Product'); ?>';
+    var timeoutlink = '<?php echo $this->getTimeout() ?>';
+    var reload = '<?php echo $this->getReload() ?>';
+</script>

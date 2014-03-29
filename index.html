@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0089)http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass -->
+<html xmlns="http://www.w3.org/1999/xhtml" style="" class=" js no-touch svg inlinesvg svgclippaths no-ie8compat"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Supr admin</title>
+    <meta name="author" content="SuggeElson">
+    <meta name="description" content="Supr admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework">
+    <meta name="keywords" content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, masonry, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap">
+    <meta name="application-name" content="Supr admin template">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Force IE9 to render in normal mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Le styles -->
+    <!-- Use new way for google web fonts 
+    http://www.smashingmagazine.com/2012/07/11/avoiding-faux-weights-styles-google-web-fonts -->
+    <!-- Headings -->
+    <link href="/assets/css" rel="stylesheet" type="text/css">
+    <!-- Text -->
+    <link href="/assets/css(1)" rel="stylesheet" type="text/css"> 
+    <!--[if lt IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- Core stylesheets do not remove -->
+    <link id="bootstrap" href="/assets/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/assets/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="/assets/jquery.ui.supr.css" rel="stylesheet" type="text/css">
+    <link href="/assets/icons.css" rel="stylesheet" type="text/css">
+
+    <!-- Plugins stylesheets -->
+    <link href="/assets/jquery.qtip.css" rel="stylesheet" type="text/css">
+    <link href="/assets/fullcalendar.css" rel="stylesheet" type="text/css">
+    <link href="/assets/tipuesearch.css" type="text/css" rel="stylesheet">
+
+    <link href="/assets/uniform.default.css" type="text/css" rel="stylesheet">
+
+    <!-- Main stylesheets -->
+    <link href="/assets/main.css" rel="stylesheet" type="text/css"> 
+
+    <!-- Custom stylesheets ( Put your own changes here ) -->
+    <link href="/assets/custom.css" rel="stylesheet" type="text/css"> 
+
+    <!--[if IE 8]><link href="css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="js/libs/excanvas.min.js"></script>
+      <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script type="text/javascript" src="js/libs/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://themes.suggeelson.com/supr/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://themes.suggeelson.com/supr/images/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://themes.suggeelson.com/supr/images/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://themes.suggeelson.com/supr/images/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://themes.suggeelson.com/supr/images/apple-touch-icon-57-precomposed.png">
+    
+    <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
+    <meta name="application-name" content="Supr"> 
+    <meta name="msapplication-TileColor" content="#3399cc"> 
+
+    <!-- Load modernizr first -->
+    <script src="/assets/jquery.placeholder.min.js"></script><script type="text/javascript" src="/assets/modernizr.js"></script>
+
+    <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+      
+    <body>
+    <!-- loading animation -->
+    <div id="qLoverlay" style="display: none;"></div>
+    <div id="qLbar" style="display: none;"></div>
+        
+    <div id="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://themes.suggeelson.com/supr/dashboard.html">Supr.<span class="slogan">admin</span></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon16 icomoon-icon-arrow-4"></span>
+                </button>
+            </div> 
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="http://themes.suggeelson.com/supr/dashboard.html"><span class="icon16 icomoon-icon-screen-2"></span> <span class="txt">Dashboard</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="icon16 icomoon-icon-cog"></span><span class="txt"> Settings</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="menu">
+                                <ul>
+                                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-equalizer"></span>Site config</a></li>
+                                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-wrench"></span>Plugins</a></li>
+                                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-image-2"></span>Themes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="icon16 icomoon-icon-envelop"></span><span class="txt">Messages</span><span class="notification">8</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="menu">
+                                <ul class="messages">    
+                                    <li class="header"><strong>Messages</strong> (10) emails and (2) PM</li>
+                                    <li>
+                                       <span class="icon"><span class="icon16 icomoon-icon-user-plus"></span></span>
+                                        <span class="name"><a data-toggle="modal" href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#myModal1"><strong>Sammy Morerira</strong></a><span class="time">35 min ago</span></span>
+                                        <span class="msg">I have question about new function ...</span>
+                                    </li>
+                                    <li>
+                                       <span class="icon avatar"><img src="/assets/avatar.jpg" alt=""></span>
+                                        <span class="name"><a data-toggle="modal" href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#myModal1"><strong>George Michael</strong></a><span class="time">1 hour ago</span></span>
+                                        <span class="msg">I need to meet you urgent please call me ...</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><span class="icon16 icomoon-icon-envelop"></span></span>
+                                        <span class="name"><a data-toggle="modal" href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#myModal1"><strong>Ivanovich</strong></a><span class="time">1 day ago</span></span>
+                                        <span class="msg">I send you my suggestion, please look and ...</span>
+                                    </li>
+                                    <li class="view-all"><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">View all messages <span class="icon16 icomoon-icon-arrow-right-8"></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+              
+                <ul class="nav navbar-right usernav">
+                    <li class="dropdown">
+                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="icon16 icomoon-icon-bell"></span><span class="notification">3</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="menu">
+                                <ul class="notif">
+                                    <li class="header"><strong>Notifications</strong> (3) items</li>
+                                    <li>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <span class="icon"><span class="icon16 icomoon-icon-user-plus"></span></span>
+                                            <span class="event">1 User is registred</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <span class="icon"><span class="icon16 icomoon-icon-bubble-3"></span></span>
+                                            <span class="event">Jony add 1 comment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <span class="icon"><span class="icon16 icomoon-icon-new"></span></span>
+                                            <span class="event">admin Julia added post with a long description</span>
+                                        </a>
+                                    </li>
+                                    <li class="view-all"><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">View all notifications <span class="icon16 icomoon-icon-arrow-right-8"></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="dropdown-toggle avatar" data-toggle="dropdown">
+                            <img src="/assets/avatar.jpg" alt="" class="image"> 
+                            <span class="txt">admin@supr.com</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="menu">
+                                <ul>
+                                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-user-plus"></span>Edit profile</a></li>
+                                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-bubble-2"></span>Approve comments</a></li>
+                                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-plus"></span>Add user</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="http://themes.suggeelson.com/supr/index.html"><span class="icon16 icomoon-icon-exit"></span><span class="txt"> Logout</span></a></li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+        </nav><!-- /navbar --> 
+
+    </div><!-- End #header -->
+
+    <div id="wrapper">
+
+        <!--Responsive navigation button-->  
+        <div class="resBtn">
+            <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 minia-icon-list-3"></span></a>
+        </div>
+        
+        <!--Left Sidebar collapse button-->  
+        <div class="collapseBtn leftbar">
+             <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tipR" oldtitle="Hide Left Sidebar" title="" data-hasqtip="true"><span class="icon12 minia-icon-layout"></span></a>
+        </div>
+
+        <!--Sidebar background-->
+        <div id="sidebarbg"></div>
+        <!--Sidebar content-->
+        <div id="sidebar">
+
+            <div class="shortcuts">
+                <ul>
+                    <li><a href="http://themes.suggeelson.com/supr/support.html" class="tip" oldtitle="Support section" title="" data-hasqtip="true"><span class="icon24 icomoon-icon-support"></span></a></li>
+                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Database backup" title="" data-hasqtip="true"><span class="icon24 icomoon-icon-database"></span></a></li>
+                    <li><a href="http://themes.suggeelson.com/supr/charts.html" class="tip" oldtitle="Sales statistics" title="" data-hasqtip="true"><span class="icon24 icomoon-icon-pie-2"></span></a></li>
+                    <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Write post" title="" data-hasqtip="true"><span class="icon24 icomoon-icon-pencil"></span></a></li>
+                </ul>
+            </div><!-- End search -->            
+
+            <div class="sidenav">
+
+                <div class="sidebar-widget" style="margin: -1px 0 0 0;">
+                    <h5 class="title" style="margin-bottom:0">Navigation</h5>
+                </div><!-- End .sidenav-widget -->
+
+                <div class="mainnav">
+                    <ul>
+                        <li><a href="http://themes.suggeelson.com/supr/charts.html"><span class="icon16 icomoon-icon-stats-up"></span>Charts</a></li>
+                        <li>
+                            <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="hasUl"><span class="icon16 icomoon-icon-list"></span>Forms<span class="notification red">sub2</span><span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                            <ul class="sub">
+                                <li><a href="http://themes.suggeelson.com/supr/forms.html"><span class="icon16 icomoon-icon-file"></span>Forms Stuff</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/forms-validation.html"><span class="icon16 icomoon-icon-file"></span>Validation</a></li>
+                                <li>
+                                    <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="hasUl"><span class="icon16 icomoon-icon-file"></span>Sub Level 2<span class="notification red">new</span><span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                                     <ul class="sub">
+                                        <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-arrow-right-3"></span>Item</a></li>
+                                        <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-arrow-right-3"></span>Item</a></li>
+                                        <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-arrow-right-3"></span>Item</a></li>
+                                        <li><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-arrow-right-3"></span>Item</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="hasUl"><span class="icon16 icomoon-icon-table-2"></span>Tables<span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                            <ul class="sub">
+                                <li><a href="http://themes.suggeelson.com/supr/tables.html"><span class="icon16 icomoon-icon-arrow-right-3"></span>Static</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/data-table.html"><span class="icon16 icomoon-icon-arrow-right-3"></span>Data table</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="hasUl"><span class="icon16 icomoon-icon-equalizer-2"></span>UI Elements<span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                            <ul class="sub">
+                                <li><a href="http://themes.suggeelson.com/supr/icons.html"><span class="icon16 icomoon-icon-rocket"></span>Icons</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/buttons.html"><span class="icon16 icomoon-icon-file"></span>Buttons</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/elements.html"><span class="icon16 icomoon-icon-cogs"></span>Elements</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://themes.suggeelson.com/supr/typo.html"><span class="icon16 icomoon-icon-font"></span>Typography</a></li>
+                        <li><a href="http://themes.suggeelson.com/supr/grid.html"><span class="icon16 icomoon-icon-grid"></span>Grid</a></li>
+                        <li><a href="http://themes.suggeelson.com/supr/calendar.html"><span class="icon16 icomoon-icon-calendar"></span>Calendar</a></li>
+                        <li>
+                            <a href="http://themes.suggeelson.com/supr/widgets.html"><span class="icon16 icomoon-icon-cube"></span>Widgets<span class="notification green">35</span></a>
+                        </li>
+                        <li><a href="http://themes.suggeelson.com/supr/file.html"><span class="icon16 icomoon-icon-upload"></span>File Manager</a></li>
+                        <li>
+                            <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="hasUl"><span class="icon16 icomoon-icon-file"></span>Error pages<span class="notification">6</span><span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                            <ul class="sub">
+                                <li><a href="http://themes.suggeelson.com/supr/403.html"><span class="icon16 icomoon-icon-file"></span>Error 403</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/404.html"><span class="icon16 icomoon-icon-file"></span>Error 404</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/405.html"><span class="icon16 icomoon-icon-file"></span>Error 405</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/500.html"><span class="icon16 icomoon-icon-file"></span>Error 500</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/503.html"><span class="icon16 icomoon-icon-file"></span>Error 503</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/offline.html"><span class="icon16 icomoon-icon-file"></span>Offline page</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="hasUl"><span class="icon16 icomoon-icon-folder"></span>Other pages<span class="notification blue">11</span><span class="hasDrop icon16 icomoon-icon-arrow-down-2"></span></a>
+                            <ul class="sub">
+                                <li><a href="http://themes.suggeelson.com/supr/invoice.html"><span class="icon16 icomoon-icon-file"></span>Invoice page</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/profile.html"><span class="icon16 icomoon-icon-file"></span>User profile</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/search.html"><span class="icon16 icomoon-icon-search-3"></span>Search page</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/email.html"><span class="icon16 icomoon-icon-envelop"></span>Email page</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/support.html"><span class="icon16  icomoon-icon-support"></span>Support page</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/faq.html"><span class="icon16 icomoon-icon-attachment"></span>FAQ page</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/structure.html"><span class="icon16 icomoon-icon-file"></span>Blank page</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/fixed-topbar.html"><span class="icon16 icomoon-icon-file"></span>Fixed topbar</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/right-sidebar.html"><span class="icon16 icomoon-icon-file"></span>Right sidebar</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/two-sidebars.html"><span class="icon16 icomoon-icon-file"></span>Two sidebars</a></li>
+                                <li><a href="http://themes.suggeelson.com/supr/drag.html"><span class="icon16 icomoon-icon-move"></span>Drag &amp; Drop <span class="notification red">new</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End sidenav -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">Monthly Bandwidth Transfer</h5>
+                <div class="content">
+                    <span class="icon16 icomoon-icon-loop left"></span>
+                    <div class="progress progress-mini left tip" oldtitle="87%" title="" data-hasqtip="true">
+                      <div class="progress-bar progress-bar-danger" style="width: 87%;"></div>
+                    </div>
+                    <span class="percent">87%</span>
+                    <div class="stat">19419.94 / 12000 MB</div>
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">Disk Space Usage</h5>
+                <div class="content">
+                    <span class="icon16  icomoon-icon-storage-2 left"></span>
+                    <div class="progress progress-mini left tip" oldtitle="16%" title="" data-hasqtip="true">
+                      <div class="progress-bar progress-bar-success" style="width: 16%;"></div>
+                    </div>
+                    <span class="percent">16%</span>
+                    <div class="stat">304.44 / 8000 MB</div>
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">Ad sense stats</h5>
+                <div class="content">
+                    
+                    <div class="stats">
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">Advert View</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-eye left"></span>
+                            <div class="number">21,501</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-up-2 green"></span>
+                                5%
+                            </div>
+                            <span id="stat1" class="spark"><canvas width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></canvas></span>
+                        </div>
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">Clicks</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-thumbs-up left"></span>
+                            <div class="number">308</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-down-2 red"></span>
+                                8%
+                            </div>
+                            <span id="stat2" class="spark"><canvas width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></canvas></span>
+                        </div>
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">Page CTR</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-heart left"></span>
+                            <div class="number">4%</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-down-2 red"></span>
+                                1%
+                            </div>
+                            <span id="stat3" class="spark"><canvas width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></canvas></span>
+                        </div>
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">Earn money</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-coin left"></span>
+                            <div class="number">$376</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-up-2 green"></span>
+                                26%
+                            </div>
+                            <span id="stat4" class="spark"><canvas width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></canvas></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">Right now</h5>
+                <div class="content">
+                    <div class="rightnow">
+                        <ul class="list-unstyled">
+                            <li><span class="number">34</span><span class="icon16 icomoon-icon-new"></span>Posts</li>
+                            <li><span class="number">7</span><span class="icon16 icomoon-icon-file"></span>Pages</li>
+                            <li><span class="number">14</span><span class="icon16 icomoon-icon-list-2"></span>Categories</li>
+                            <li><span class="number">201</span><span class="icon16 icomoon-icon-tag"></span>Tags</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+        </div><!-- End #sidebar -->
+
+        <!--Body content-->
+        <div id="content" class="clearfix">
+            <div class="contentwrapper"><!--Content wrapper-->
+
+                <div class="heading">
+
+                    <h3>Dashboard</h3>                    
+
+                    <div class="resBtnSearch">
+                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#"><span class="icon16 icomoon-icon-search-3"></span></a>
+                    </div>
+
+                    <div class="search">
+
+                        <form id="searchform" action="http://themes.suggeelson.com/supr/search.html">
+                            <input type="text" id="tipue_search_input" class="top-search uniform-input text" placeholder="Search here ...">
+                            <input type="submit" id="tipue_search_button" class="search-btn nostyle" value="">
+                        </form>
+                
+                    </div><!-- End search -->
+                    
+                    <ul class="breadcrumb">
+                        <li>You are here:</li>
+                        <li>
+                            <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="back to dashboard" title="" data-hasqtip="true">
+                                <span class="icon16 icomoon-icon-screen-2"></span>
+                            </a> 
+                            <span class="divider">
+                                <span class="icon16 icomoon-icon-arrow-right-3"></span>
+                            </span>
+                        </li>
+                        <li class="active">Dashboard</li>
+                    </ul>
+
+                </div><!-- End .heading-->
+
+                <!-- Build page from here: -->
+                <div class="row">
+
+                    <div class="col-lg-8">
+                        <div class="centerContent">
+                  
+                            <ul class="bigBtnIcon">
+                                <li>
+                                    <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tipB" oldtitle="I`m with gradient" title="" data-hasqtip="true">
+                                        <span class="icon icomoon-icon-users"></span>
+                                        <span class="txt">Users</span>
+                                        <span class="notification">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                        <span class="icon icomoon-icon-support"></span>
+                                        <span class="txt">Support tickets</span>
+                                        <span class="notification blue">12</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="pattern tipB" oldtitle="I`m with pattern" title="" data-hasqtip="true">
+                                        <span class="icon icomoon-icon-bubbles-2"></span>
+                                        <span class="txt">New Comments</span>
+                                        <span class="notification green">23</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                        <span class="icon icomoon-icon-basket"></span>
+                                        <span class="txt">Orders</span>
+                                        <span class="notification">+5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                        <span class="icon icomoon-icon-history"></span>
+                                        <span class="txt">Backups</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                        <span class="icon icomoon-icon-meter-fast"></span>
+                                        <span class="txt">Site Usage</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- End .span8 -->
+
+                    <div class="col-lg-4">
+                        <div class="centerContent">
+                            <div dir="ltr" class="circle-stats">
+                                
+                                <div class="circular-item tipB" oldtitle="Site overload" title="" data-hasqtip="true">
+                                    <span class="icon icomoon-icon-fire"></span>
+                                    <div style="display:inline;width:80px;height:80px;"><canvas width="80" height="80"></canvas><input type="text" value="62" class="redCircle uniform-input text" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: Arial; text-align: center; color: rgb(237, 122, 83); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+                                </div>
+
+                                <div class="circular-item tipB" oldtitle="Site average load time" title="" data-hasqtip="true">
+                                    <span class="icon icomoon-icon-busy"></span>
+                                    <div style="display:inline;width:80px;height:80px;"><canvas width="80" height="80"></canvas><input type="text" value="12" class="blueCircle uniform-input text" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: Arial; text-align: center; color: rgb(136, 187, 200); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+                                </div>
+
+                                <div class="circular-item tipB" oldtitle="Target complete" title="" data-hasqtip="true">
+                                    <span class="icon icomoon-icon-target-2"></span>
+                                    <div style="display:inline;width:80px;height:80px;"><canvas width="80" height="80"></canvas><input type="text" value="94" class="greenCircle uniform-input text" readonly="readonly" style="width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 16px; line-height: normal; font-family: Arial; text-align: center; color: rgb(159, 197, 105); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div><!-- End .span4 -->
+
+                </div><!-- End .row -->
+
+                <div class="row">
+
+                    <div class="col-lg-8">
+
+                        <div class="panel panel-default chart gradient hover">
+                            <div class="panel-heading">
+                                <h4>
+                                    <span class="icon16 icomoon-icon-bars"></span>
+                                    <span>Visitors Chart</span>
+                                </h4>
+                                <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="minimize" style="display: inline;">Minimize</a>
+                            </div>
+                            <div class="panel-body" style="padding-bottom:0;">
+                               <div class="visitors-chart" style="height: 230px; width: 100%; margin-top: 15px; margin-bottom: 15px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 743px; height: 230px;" width="743" height="230"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 45px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 94px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 143px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 192px; text-align: center;">8</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 239px; text-align: center;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 288px; text-align: center;">12</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 337px; text-align: center;">14</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 386px; text-align: center;">16</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 436px; text-align: center;">18</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 485px; text-align: center;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 534px; text-align: center;">22</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 583px; text-align: center;">24</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 633px; text-align: center;">26</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 682px; text-align: center;">28</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 46px; top: 215px; left: 731px; text-align: center;">30</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 203px; left: 12px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 162px; left: 6px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 122px; left: 6px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 81px; left: 6px; text-align: right;">60</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 41px; left: 6px; text-align: right;">80</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 0px; text-align: right;">100</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 743px; height: 230px;" width="743" height="230"></canvas><div class="legend"><div style="position: absolute; width: 134px; height: 17px; top: -17px; right: 6px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:-17px;right:6px;;font-size:smaller;color:#3f3f3f"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(136,187,200);overflow:hidden"></div></div></td><td class="legendLabel">Visits&nbsp;&nbsp;</td><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(237,122,83);overflow:hidden"></div></div></td><td class="legendLabel">Unique Visits&nbsp;&nbsp;</td></tr></tbody></table></div></div>
+                               <ul class="chartShortcuts">
+                                    <li>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <span class="head">Total Visits</span>
+                                            <span class="number">509</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <span class="head">Uniqiue Visits</span>
+                                            <span class="number">309</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <span class="head">External Visits</span>
+                                            <span class="number">109</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <span class="head">Impressions</span>
+                                            <span class="number">325</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+
+                        </div><!-- End .panel -->
+
+                    </div><!-- End .span8 -->
+
+                    <div class="col-lg-4">
+
+                        <div class="sparkStats">
+                            <h4>389 people visited this site <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="icon tip" oldtitle="Configure" title="" data-hasqtip="true"><span class="icon16 icomoon-icon-cog-2"></span></a></h4>
+                            <ul class="list-unstyled">
+                                <li><span class="sparkLine1 "><canvas width="100" height="30" style="display: inline-block; width: 100px; height: 30px; vertical-align: top;"></canvas></span> Visits: <span class="number">509</span></li>
+                                <li>
+                                    <span class="sparkLine2"><canvas width="100" height="30" style="display: inline-block; width: 100px; height: 30px; vertical-align: top;"></canvas></span>
+                                    Unique Visitors: 
+                                    <span class="number">389</span>
+                                </li>
+                                <li><span class="sparkLine3"><canvas width="100" height="30" style="display: inline-block; width: 100px; height: 30px; vertical-align: top;"></canvas></span> 
+                                    Pageviews: 
+                                    <span class="number">731</span>
+                                </li>
+                                <li><span class="sparkLine4"><canvas width="100" height="30" style="display: inline-block; width: 100px; height: 30px; vertical-align: top;"></canvas></span>
+                                    Pages / Visit: 
+                                    <span class="number">1.44</span>
+                                </li>
+                                <li><span class="sparkLine5"><canvas width="100" height="30" style="display: inline-block; width: 100px; height: 30px; vertical-align: top;"></canvas></span>
+                                    Avg. Visit Duration: 
+                                    <span class="number">00:01:21</span>
+                                </li>
+                                <li><span class="sparkLine6"><canvas width="100" height="30" style="display: inline-block; width: 100px; height: 30px; vertical-align: top;"></canvas></span>
+                                    Bounce Rate: <span class="number">68.37%</span>
+                                </li>
+                                <li><span class="sparkLine7"><canvas width="100" height="30" style="display: inline-block; width: 100px; height: 30px; vertical-align: top;"></canvas></span>
+                                    % New Visits: 
+                                    <span class="number">76.23%</span>
+                                </li>
+
+                            </ul>
+                            <div class="right" style="padding: 15px 0">
+                                <a href="http://themes.suggeelson.com/supr/charts.html" class="btn btn-info">View full statistic <span class="icon16 icomoon-icon-arrow-right-3 white"></span></a>
+                            </div>
+                        </div><!-- End .sparkStats -->
+                        
+
+                    </div><!-- End .span4 -->
+
+                </div><!-- End .row -->
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+
+                        <div class="panel panel-default gradient">
+
+                            <div class="panel-heading">
+                                <h4>
+                                    <span class="icon16 icomoon-icon-pie"></span>
+                                    <span>Visitors overview</span>
+                                </h4>
+                                <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="minimize" style="display: none;">Minimize</a>
+                            </div>
+                            <div class="panel-body">
+                               <div class="pieStats" style="height: 240px; width: 100%; padding: 0px; position: relative;">
+
+                                <canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 341px; height: 240px;" width="341" height="240"></canvas><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 341px; height: 240px;" width="341" height="240"></canvas><div class="legend"><div style="position: absolute; width: 136px; height: 34px; top: 5px; right: 5px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:5px;right:5px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #88bbc8;overflow:hidden"></div></div></td><td class="legendLabel">%78.75 New Visitor</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #ed7a53;overflow:hidden"></div></div></td><td class="legendLabel">%21.25 Returning Visitor</td></tr></tbody></table></div></div>
+                            </div>
+
+                        </div><!-- End .panel -->
+
+                     
+                    </div><!-- End .span4 -->
+
+                    <div class="col-lg-4">
+                        <div class="panel panel-default gradient">
+
+                            <div class="panel-heading">
+                                <h4>
+                                    <span class="icon16 icomoon-icon-thumbs-up"></span>
+                                    <span>Vital Stats  <span class="label label-success"><span class="icomoon-icon-arrow-up-2 white"></span>1268</span></span>
+                                </h4>
+                                <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="minimize">Minimize</a>
+                            </div>
+                            <div class="panel-body">
+                              
+                                <div class="vital-stats" style="padding-bottom:23px">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 81% Clicks
+                                            <span class="pull-right strong">567</span>
+                                            <div class="progress progress-striped">
+                                                <div class="progress-bar" style="width: 81%;"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 72% Uniquie Clicks
+                                            <span class="pull-right strong">507</span>
+                                            <div class="progress progress-striped ">
+                                                <div class="progress-bar progress-bar-success" style="width: 72%;"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="icon24 icomoon-icon-arrow-down-2 red"></span> 53% Impressions
+                                            <span class="pull-right strong">457</span>
+                                            <div class="progress progress-striped ">
+                                                <div class="progress-bar progress-bar-warning" style="width: 53%;"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 3% Online Users
+                                            <span class="pull-right strong">8</span>
+                                            <div class="progress progress-striped ">
+                                                <div class="progress-bar progress-bar-danger" style="width: 3%;"></div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div><!-- End .panel -->  
+                    </div><!-- End .span4 -->
+
+                    <div class="col-lg-4">
+
+                        <div class="reminder">
+                            <h4>Things you need to do 
+                                <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="icon tip" oldtitle="Configure" title="" data-hasqtip="true"><span class="icon16 icomoon-icon-cog-2"></span></a>
+                            </h4>
+                            <ul>
+                                <li class="clearfix">
+                                    <div class="icon">
+                                        <span class="icon32 icomoon-icon-basket gray"></span>
+                                    </div>
+                                    <span class="number">7</span> 
+                                    <span class="txt">Pending Orders</span>
+                                    <a class="btn btn-warning">go</a>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="icon">
+                                        <span class="icon32 icomoon-icon-support red"></span>
+                                    </div>
+                                    <span class="number">3</span> 
+                                    <span class="txt">Support Tickets </span>
+                                    <a class="btn btn-warning">go</a>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="icon">
+                                        <span class="icon32 icomoon-icon-new green"></span>
+                                    </div>
+                                    <span class="number">5</span> 
+                                    <span class="txt">New Invoices </span>
+                                    <a class="btn btn-warning">go</a>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="icon">
+                                        <span class="icon32 icomoon-icon-bubbles-2 blue"></span>
+                                    </div>
+                                    <span class="number">13</span> 
+                                    <span class="txt">Review Comments</span> 
+                                    <a class="btn btn-warning">go</a>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="icon">
+                                        <span class="icon32 icomoon-icon-cog dark"></span>
+                                    </div>
+                                    <span class="number">2</span> 
+                                    <span class="txt">Settings to Change </span>
+                                    <a class="btn btn-warning">go</a>
+                                </li>                                   
+                            </ul>
+                        </div><!-- End .reminder -->
+
+                    </div><!-- End .span4 -->
+
+                </div><!-- End .row -->
+
+                <div class="row">
+
+                    <div class="col-lg-8">
+                        <div class="panel panel-default calendar gradient">
+                            <div class="panel-heading">
+                                <h4>
+                                    <span class="icon16 icomoon-icon-calendar"></span>
+                                    <span>Calendar</span>
+                                </h4>
+                                <!-- <a href="#" class="minimize">Minimize</a> -->
+                            </div>
+                            <div class="panel-body noPad"> 
+                                <div id="calendar" class="fc fc-ltr"><table class="fc-header" style="width:100%"><tbody><tr><td class="fc-header-left"><span class="fc-header-title"><h2>November 2013</h2></span><span class="fc-button fc-button-today fc-state-default fc-corner-left fc-corner-right fc-state-disabled" unselectable="on">today</span></td><td class="fc-header-center"><span class="fc-button fc-button-prev fc-state-default fc-corner-left" unselectable="on"><span class="icon24 icomoon-icon-arrow-left-2"></span></span><span class="fc-button fc-button-next fc-state-default fc-corner-right" unselectable="on"><span class="icon24 icomoon-icon-arrow-right-3"></span></span></td><td class="fc-header-right"><span class="fc-button fc-button-month fc-state-default fc-corner-left fc-state-active" unselectable="on">month</span><span class="fc-button fc-button-agendaWeek fc-state-default" unselectable="on">week</span><span class="fc-button fc-button-agendaDay fc-state-default fc-corner-right" unselectable="on">day</span></td></tr></tbody></table><div class="fc-content" style="position: relative; min-height: 1px;"><div class="fc-view fc-view-month fc-grid" style="position: relative; min-height: 1px;" unselectable="on"><div style="position:absolute;z-index:8;top:0;left:0"><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 552px; width: 103px; top: 62px;"><div class="fc-event-inner"><span class="fc-event-title">All Day Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 2px; width: 433px; top: 327px;"><div class="fc-event-inner"><span class="fc-event-title">Long Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 552px; width: 103px; top: 327px;"><div class="fc-event-inner"><span class="fc-event-time">10:30a</span><span class="fc-event-title">Meeting</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 662px; background-color: rgb(237, 122, 83); border-color: rgb(237, 122, 83); width: 108px; top: 327px;"><div class="fc-event-inner"><span class="fc-event-time">7p</span><span class="fc-event-title">Birthday Party</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 552px; background-color: rgb(159, 197, 105); border-color: rgb(159, 197, 105); width: 103px; top: 345px;"><div class="fc-event-inner"><span class="fc-event-time">12p</span><span class="fc-event-title">Lunch</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 222px; width: 103px; top: 345px;"><div class="fc-event-inner"><span class="fc-event-time">4p</span><span class="fc-event-title">Repeating Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><a href="http://google.com/" class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 442px; width: 213px; top: 415px;"><div class="fc-event-inner"><span class="fc-event-title">Click for Google</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></a><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 222px; width: 103px; top: 415px;"><div class="fc-event-inner"><span class="fc-event-time">4p</span><span class="fc-event-title">Repeating Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div></div><table class="fc-border-separate" style="width:100%" cellspacing="0"><thead><tr class="fc-first fc-last"><th class="fc-day-header fc-sun fc-widget-header fc-first" style="width: 110px;">Sun</th><th class="fc-day-header fc-mon fc-widget-header" style="width: 110px;">Mon</th><th class="fc-day-header fc-tue fc-widget-header" style="width: 110px;">Tue</th><th class="fc-day-header fc-wed fc-widget-header" style="width: 110px;">Wed</th><th class="fc-day-header fc-thu fc-widget-header" style="width: 110px;">Thu</th><th class="fc-day-header fc-fri fc-widget-header" style="width: 110px;">Fri</th><th class="fc-day-header fc-sat fc-widget-header fc-last">Sat</th></tr></thead><tbody><tr class="fc-week fc-first"><td class="fc-day fc-sun fc-widget-content fc-other-month fc-first" data-date="2013-10-27"><div style="min-height: 88px;"><div class="fc-day-number">27</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-other-month" data-date="2013-10-28"><div><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-other-month" data-date="2013-10-29"><div><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-other-month" data-date="2013-10-30"><div><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-other-month" data-date="2013-10-31"><div><div class="fc-day-number">31</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content" data-date="2013-11-01"><div><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-last" data-date="2013-11-02"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-first" data-date="2013-11-03"><div style="min-height: 87px;"><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content" data-date="2013-11-04"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content" data-date="2013-11-05"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content" data-date="2013-11-06"><div><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content" data-date="2013-11-07"><div><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content" data-date="2013-11-08"><div><div class="fc-day-number">8</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-last" data-date="2013-11-09"><div><div class="fc-day-number">9</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-first" data-date="2013-11-10"><div style="min-height: 87px;"><div class="fc-day-number">10</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content" data-date="2013-11-11"><div><div class="fc-day-number">11</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content" data-date="2013-11-12"><div><div class="fc-day-number">12</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content" data-date="2013-11-13"><div><div class="fc-day-number">13</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content" data-date="2013-11-14"><div><div class="fc-day-number">14</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content" data-date="2013-11-15"><div><div class="fc-day-number">15</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-last" data-date="2013-11-16"><div><div class="fc-day-number">16</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-first" data-date="2013-11-17"><div style="min-height: 87px;"><div class="fc-day-number">17</div><div class="fc-day-content"><div style="position: relative; height: 36px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content" data-date="2013-11-18"><div><div class="fc-day-number">18</div><div class="fc-day-content"><div style="position: relative; height: 36px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content" data-date="2013-11-19"><div><div class="fc-day-number">19</div><div class="fc-day-content"><div style="position: relative; height: 36px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content" data-date="2013-11-20"><div><div class="fc-day-number">20</div><div class="fc-day-content"><div style="position: relative; height: 36px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content" data-date="2013-11-21"><div><div class="fc-day-number">21</div><div class="fc-day-content"><div style="position: relative; height: 36px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-today fc-state-highlight" data-date="2013-11-22"><div><div class="fc-day-number">22</div><div class="fc-day-content"><div style="position: relative; height: 36px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-last" data-date="2013-11-23"><div><div class="fc-day-number">23</div><div class="fc-day-content"><div style="position: relative; height: 36px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-first" data-date="2013-11-24"><div style="min-height: 87px;"><div class="fc-day-number">24</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content" data-date="2013-11-25"><div><div class="fc-day-number">25</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content" data-date="2013-11-26"><div><div class="fc-day-number">26</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content" data-date="2013-11-27"><div><div class="fc-day-number">27</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content" data-date="2013-11-28"><div><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content" data-date="2013-11-29"><div><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-last" data-date="2013-11-30"><div><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td></tr><tr class="fc-week fc-last"><td class="fc-day fc-sun fc-widget-content fc-other-month fc-first" data-date="2013-12-01"><div style="min-height: 91px;"><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-other-month" data-date="2013-12-02"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-other-month" data-date="2013-12-03"><div><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-other-month" data-date="2013-12-04"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-other-month" data-date="2013-12-05"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-other-month" data-date="2013-12-06"><div><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-other-month fc-last" data-date="2013-12-07"><div><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td></tr></tbody></table></div></div>
+                                </div>
+                            </div>
+
+                        </div><!-- End .panel -->  
+                    </div><!-- End .span8 --> 
+
+                    <div class="col-lg-4">
+
+                        <div class="todo">
+                            <h4>To Do List <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="icon tip" oldtitle="Add task" title="" data-hasqtip="true"><span class="icon16 icomoon-icon-plus"></span></a></h4>
+                            <ul>
+                                <li class="clearfix">
+                                    <div class="txt">
+                                        Fix some bugs
+                                        <span class="by badge">Admin</span>
+                                        <span class="date label label-danger">Today</span>
+                                    </div>
+                                    <div class="controls">
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Edit task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Remove task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-remove"></span></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="txt">
+                                        Add post about birds
+                                        <span class="by badge">Julia</span>
+                                        <span class="date label label-success">Tomorrow</span>
+                                    </div>
+                                    <div class="controls">
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Edit task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Remove task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-remove"></span></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="txt">
+                                        Remove some items
+                                        <span class="by badge">Admin</span>
+                                        <span class="date label label-success">Tomorrow</span>
+                                    </div>
+                                    <div class="controls">
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Edit task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Remove task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-remove"></span></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="txt">
+                                        Staff party
+                                        <span class="by badge">Admin</span>
+                                        <span class="date label label-info">08.08.2012</span>
+                                    </div>
+                                    <div class="controls">
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Edit task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Remove task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-remove"></span></a>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="txt">
+                                        Shedule backup
+                                        <span class="by badge">Steve</span>
+                                        <span class="date label label-info">08.08.2012</span>
+                                    </div>
+                                    <div class="controls">
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Edit task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="tip" oldtitle="Remove task" title="" data-hasqtip="true"><span class="icon12 icomoon-icon-remove"></span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div><!-- End .span4 -->
+
+                    <div class="col-lg-4">
+
+                        <div class="panel panel-default gradient">
+                            <div class="panel-heading">
+                                <h4>
+                                    <span class="icon16 icomoon-icon-bubbles-6"></span>
+                                    <span>Messages layout</span>
+                                </h4>
+                            </div>
+                            <div class="panel-body noPad">
+
+                                <ul class="messages">
+                                    <li class="user clearfix">
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="avatar">
+                                            <img src="/assets/avatar2.jpeg" alt="user">
+                                        </a>
+                                        <div class="message">
+                                            <div class="head clearfix">
+                                                <span class="name"><strong>Lazar</strong> says:</span>
+                                                <span class="time">25 seconds ago</span>
+                                            </div>
+                                            <p>
+                                                Time to go i call you tomorrow.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="admin clearfix">
+                                        <a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" class="avatar">
+                                            <img src="/assets/avatar3.jpeg" alt="user">
+                                        </a>
+                                        <div class="message">
+                                            <div class="head clearfix">
+                                                <span class="name"><strong>Sugge</strong> says:</span>
+                                                <span class="time">just now</span>
+                                            </div>
+                                            <p>
+                                                OK, have a nice day.
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li class="sendMsg">
+                                        <form class="form-horizontal" action="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#">
+                                            <textarea class="elastic uniform" id="textarea" rows="1" placeholder="Enter your message ..." style="width:98%;"></textarea>
+                                            <button type="submit" class="btn btn-info marginT10">Send message</button>
+                                        </form>
+                                    </li>
+                                    
+                                </ul>
+
+                            </div>
+
+                        </div><!-- End .panel -->
+
+
+                    </div><!-- End .span4 -->
+
+                </div><!-- End .row -->
+                
+            </div><!-- End contentwrapper -->
+        </div><!-- End #content -->
+    
+    </div><!-- End #wrapper -->
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Important plugins put in all pages -->
+    <script type="text/javascript" src="/assets/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap.js"></script>  
+    <script type="text/javascript" src="/assets/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="/assets/jRespond.min.js"></script>
+
+    <!-- Charts plugins -->
+    <script type="text/javascript" src="/assets/jquery.flot.js"></script>
+    <script type="text/javascript" src="/assets/jquery.flot.grow.js"></script>
+    <script type="text/javascript" src="/assets/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="/assets/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="/assets/jquery.flot.tooltip_0.4.4.js"></script>
+    <script type="text/javascript" src="/assets/jquery.flot.orderBars.js"></script>
+    <script type="text/javascript" src="/assets/jquery.sparkline.min.js"></script><!-- Sparkline plugin -->
+    <script type="text/javascript" src="/assets/jquery.knob.js"></script><!-- Circular sliders and stats -->
+
+    <!-- Misc plugins -->
+    <script type="text/javascript" src="/assets/fullcalendar.min.js"></script><!-- Calendar plugin -->
+    <script type="text/javascript" src="/assets/jquery.qtip.min.js"></script><!-- Custom tooltip plugin -->
+    <script type="text/javascript" src="/assets/jquery.ui.totop.min.js"></script> <!-- Back to top plugin -->
+    
+    <!-- Search plugin -->
+    <script type="text/javascript" src="/assets/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="/assets/tipuesearch_data.js"></script><!-- JSON for searched results -->
+    <script type="text/javascript" src="/assets/tipuesearch.js"></script>
+
+    <!-- Form plugins -->
+    <script type="text/javascript" src="/assets/jquery.uniform.min.js"></script>
+    
+    <!-- Init plugins -->
+    <script type="text/javascript" src="/assets/main.js"></script><!-- Core js functions -->
+    <script type="text/javascript" src="/assets/dashboard.js"></script><!-- Init plugins only for page -->
+
+    
+
+<a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a><div id="flotTip" style="display: none; position: absolute; background-color: rgba(0, 0, 0, 0.870588); z-index: 10000; padding: 0.4em 0.6em; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; font-size: 11px; border: 0px solid transparent; color: rgb(255, 255, 255); left: 331px; top: 714px; background-position: initial initial; background-repeat: initial initial;"></div><div id="window-resizer-tooltip" style="display: none;"><a href="http://themes.suggeelson.com/supr/dashboard.html?username=administrator&password=somepass#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">813</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">741</span></div></body></html>

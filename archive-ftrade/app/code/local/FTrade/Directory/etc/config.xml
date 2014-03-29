@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+         <models>
+            <directory>
+                <rewrite>
+                    <city>FTrade_Directory_Model_City</city>
+                </rewrite>
+            </directory>
+         </models>
+    </global>
+    <frontend>
+        <routers>
+            <directory>
+                <use>standard</use>
+                <args>
+                    <module>FTrade_Directory</module>
+                    <frontName>directory</frontName>
+                </args>
+            </directory>
+        </routers>
+    </frontend>
+</config>

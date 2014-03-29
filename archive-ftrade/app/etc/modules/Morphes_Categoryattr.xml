@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Morphes_Categoryattr>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Morphes_Categoryattr>
+    </modules>
+</config>

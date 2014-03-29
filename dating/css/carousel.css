@@ -1,0 +1,102 @@
+
+.carousel_wrapper {
+	position: relative;
+	padding: 23px 53px 17px;
+	background: #fff;
+	border: 1px solid #dfdfdf;
+	overflow: hidden;
+	height: 151px;
+	margin-bottom: 33px;
+}
+
+.carousel_wrapper>div {
+	margin: 0 -5px;
+}
+
+
+
+.carousel1 li {
+	float: left;
+	margin: 0px 5px;
+	overflow:  hidden;
+	font-size: 12px;
+	line-height: 16px;
+	color: #fa7380;
+}
+
+.carousel1 li span {
+	display: block;
+	text-transform: uppercase;
+	color: #939393;
+}
+
+
+.carousel1 li a {
+	display: block;
+	padding: 6px;
+	margin-bottom: 6px;
+	border: 1px solid #e3e3e3;
+}
+
+.carousel1 li a img {
+	max-width: 100%;
+}
+
+.carousel1 li a:hover {
+	background: #f4717d;
+}
+
+.carousel1 {
+	cursor: default !important;	
+}
+
+
+a.next1 {
+	background: url(../images/prevnext.png) right 0 no-repeat;
+	display: block;
+	position: absolute;
+	width:34px;
+	height: 33px; 
+	right: 8px;
+	top: 74px;
+	z-index: 999;
+
+}
+
+
+a.prev1 {
+	background: url(../images/prevnext.png) 0 0 no-repeat;
+	display: block;
+	position: absolute;
+	width: 34px;
+	left: 8px;
+	height: 33px;
+	top: 74px;
+	z-index: 999;
+
+}
+
+.prev1:hover, 
+.next1:hover {
+	opacity: 0.4;
+	
+}
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+ 	.carousel1 li {
+		margin-left: 0;
+	}	
+	
+	.carousel-div {
+		margin: 0 !important;	
+	}
+}
+
+ @media only screen and (max-width: 479px) { 
+ 	.carousel1 li {
+		margin-left: 0;	
+	} }

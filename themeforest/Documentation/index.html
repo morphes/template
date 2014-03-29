@@ -1,0 +1,603 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Infinite  - Responsive admin template</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Bernad Delic">
+	<meta name="copyright" content="Bernad Delic">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2013-03-17T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#EFEFEF;color:#1C140D;}
+		::-moz-selection{background:#CBE86B;color:#1C140D;}
+		::selection{background:#CBE86B;color:#1C140D;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#889C48;}
+		hr{border-top:1px solid #CCCCCC;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#F2E9E1;color:#1C140D;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #FFF6ED;-moz-text-shadow:1px 1px 0px #FFF6ED;text-shadow:1px 1px 0px #FFF6ED;}
+		#documenter_sidebar ol{border-top:1px solid #D1C9C2;}
+		#documenter_sidebar ol a{border-top:1px solid #FFF6ED;border-bottom:1px solid #D1C9C2;color:#1C140D;}
+		#documenter_sidebar ol a:hover{background:#CBE86B;color:#1C140D;border-top:1px solid #CBE86B;}
+		#documenter_sidebar ol a.current{background:#CBE86B;color:#1C140D;border-top:1px solid #CBE86B;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#main_structure">Main structure</a></li>
+			<li><a href="#html_structure">HTML structure</a></li>
+			<li><a href="#header">Header</a></li>
+			<li><a href="#sidebar_section">Sidebar section</a></li>
+			<li><a href="#content_area">Content area</a>
+				<ol>
+					<li><a href="#content_area_top_bar">Top bar</a>
+					<li><a href="#content_area_page_info">Page info</a>
+					<li><a href="#content_area_inner_content">Inner content</a>
+				</ol>
+			</li>
+			<li><a href="#forms">Forms</a>
+				<ol>
+					<li><a href="#forms_form_wizards">Form wizards</a>
+				</ol>
+			</li>
+			<li><a href="#other_pages">Other pages</a>
+				<ol>
+					<li><a href="#other_pages_inbox_page">Inbox page</a>
+					<li><a href="#other_pages_inbox_v2">Inbox v2</a>
+					<li><a href="#other_pages_error_pages">Error pages</a>
+					<li><a href="#other_pages_gallery">Gallery</a>
+				</ol>
+			</li>
+			<li><a href="#jquery_plugins">jQuery plugins</a></li>
+			<li><a href="#images_credit">Images credit</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Bernad Delic 2013<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>Infinite </h1><h2>Responsive admin template</h2><hr><ul><li>Created: 03/16/2013</li><li>latest Update: 03/17/2013</li><li>By: Bernad Delic</li><li><a href="http://themes.tehnoremont-ds.com/infinite/">themes.tehnoremont-ds.com/infinite/</a></li><li>Email: <a href="mailto:&#102;&#98;&#103;&#95;&#108;&#105;&#108;&#108;&#105;&#102;&#101;&#101;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#102;&#98;&#103;&#95;&#108;&#105;&#108;&#108;&#105;&#102;&#101;&#101;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li></ul></section><section id="main_structure">
+	<h3>Main structure</h3><hr class="notop">
+<p>
+	<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 1.5em; -webkit-text-size-adjust: none;">This template is built on twitter bootstrap 2.3.1 framefork.</span></p>
+<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56); -webkit-text-size-adjust: none;">
+	If you are not familiar with bootstrap at all I suggest you first to visit this link and read it before any changes: <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap 2.3.1</a></p>
+<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56); -webkit-text-size-adjust: none;">
+	This template includes 25+ HTML pages and over 30 jQuery plugins.</p>
+<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56); -webkit-text-size-adjust: none;">
+	All css files are placed in folder named /css/. Inside folder /css/ you will find a directory plugin which contains css files for plugins.</p>
+<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56); -webkit-text-size-adjust: none;">
+	All images are placed in folder named /img/. Inside folder /img/ you will find directories which accord to all plugins. For example, images for forms are placed in folder named /forms/ etc...</p>
+<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56); -webkit-text-size-adjust: none;">
+	All jQuery plugins are placed in folder /js/. Inside folder /js/ you will find directories with plugins and in root folder /js/ you will find files like dashboard.js, main.js, forms.js etc.. These files contain all necessary code for plugins to work in demo pages. I don&#39;t suggest you using this files (create new one from scratch) as you will maybe not use all possibilities and plugins in this template so it will contain extra junk code.</p>
+<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56); -webkit-text-size-adjust: none;">
+	All preview images are placed in folder /preview/.</p>
+</section>
+<section id="html_structure">
+	<h3>HTML structure</h3><hr class="notop">
+<p>
+	<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px; -webkit-text-size-adjust: none;">Main html structure is basically simple. This template has a couple of layout variations like sidebar on the left or the right side, top navigation and sidebar hidden in fluid layout, container layout with top navigation etc... We will show you basic structure and what is it used for:</span></p>
+<pre class="brush: html">
+&lt;header&gt;
+
+&lt;/header&gt;
+
+&lt;div class=&quot;mainNavigation&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;content&quot;&gt;
+
+&lt;/div&gt;</pre>
+<p>
+	On this way we will create our header, our left sidebar - navigation and content.&nbsp;</p>
+<p>
+	The code above will create following:</p>
+<p>
+	IMAGE</p>
+</section>
+<section id="header">
+	<h3>Header</h3><hr class="notop">
+<p>
+	<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px; -webkit-text-size-adjust: none;">Header section is simple and you just need to replace it with your own elements. Demo example of header would look like this one:</span></p>
+<pre class="brush: html">
+&lt;a href=&quot;#&quot; class=&quot;logo&quot;&gt;&lt;img src=&quot;logoimage.png&quot;&gt;&lt;/a&gt;
+
+&lt;span id=&quot;mobileNav&quot;&gt;&lt;img src=&quot;img/mobile-icon.png&quot;&gt;&lt;/span&gt; /////// This will show a blue button on mobile devices (button which pulls navigation out and back)
+
+&lt;span id=&quot;phoneNav&quot;&gt;&lt;img src=&quot;img/mobile-icon.png&quot;&gt;&lt;/span&gt; /////// This will show an orange button on phone and the smallest devices (button which slidedowns phone&#39;s navigation from top and back)
+
+&lt;div class=&quot;phone-menu&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;This is phone navigation and display only on phone&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;Submenu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;header-actions&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;icon image&lt;/a&gt;
+    &lt;div class=&quot;dropdown&quot;&gt;
+    &lt;/div&gt;
+  &lt;li&gt;
+&lt;/ul&gt;</pre>
+<p>
+	This will create header with logo, 2 buttons from which one displays on tablet devices (blue button) and another one which displays on phone (orange one). On tablet devices whole navigation and sidebare are pulled from side, while on phone it slidedowns another navigation from top.</p>
+</section>
+<section id="sidebar_section">
+	<h3>Sidebar section</h3><hr class="notop">
+<p>	Sidebar section is simple to use. It contains main navigation with dropdown possibility on the left side and near that widgets area. &nbsp;The structure looks like this one:</p>
+<pre class="brush: html">
+&lt;div class=&quot;mainNavigation&quot;&gt;
+  &lt;div class=&quot;innerNavigation&quot;&gt;
+    
+    &lt;div class=&quot;profile clearfix&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;user image&lt;/a&gt;
+      &lt;div class=&quot;profile-options&quot;&gt;
+        &lt;div class=&quot;info&quot;&gt;
+          &lt;span class=&quot;info&quot;&gt;Username&lt;/span&gt;
+          &lt;span class=&quot;messages&quot;&gt;8&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;search&quot;&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;input type=&quot;text&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;button-red&quot;&gt;search icon image&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+<p>	This will create user avatar with options and search field on the right side. Then we insert our main navigation:</p>
+<pre class="brush: html">
+&lt;ul class=&quot;mainNav&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image&quot;&gt; &lt;span&gt;Dashboard&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image&quot;&gt; &lt;span&gt;Dropdown&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;&lt;/span&gt; Dropdown menu 1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>	This is how the main navigation should look alike, it has also possibility for third child submenu, so just checkout demo pages for preview. Then last thing is sidebar:</p>
+<pre class="brush: html">
+    &lt;div class=&quot;submenus&quot;&gt;
+      &lt;div class=&quot;widget-holder&quot;&gt;
+        Place your widget here
+      &lt;/div&gt;
+      &lt;div class=&quot;divider&quot;&gt;&lt;span&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>	You can place all widgets inside widget-holder div, as on that way widget won&#39;t be touching edges of sidebar, because it will have 20px padding on sides. Div with class divider can be used to divide areas and split widgets from each other. For example widgets check out demo pages and you can copy/paste current code, move them, edit &nbsp;etc... In sidebar you can use anything like forms, charts, carousel, pie charts, uploader widget, filetree etc...</p>
+</section>
+<section id="content_area">
+	<h3>Content area</h3><hr class="notop">
+<p>
+	Content area is simple for use. The structure is:</p>
+<pre class="brush: html">
+&lt;div class=&quot;content&quot;&gt;
+  &lt;div class=&quot;top-bar&quot;&gt;
+    
+  &lt;/div&gt;
+
+  &lt;div class=&quot;page-info&quot;&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;inner-content&quot;&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	This is main structure for content area. So on the top we have topbar which can contain breadcrumbs on the left side and dropdown menus on the right side. Then we have page info which shows us which page is currently opened and also we can place for example quick actions on the right. Then we have the rest of the content page where widgets and boxes are placed (actually the rest of the content).</p>
+<h4 id="content_area_top_bar">Top bar</h4>
+<pre class="brush: html">
+  &lt;div class=&quot;top-bar&quot;&gt;
+    &lt;div class=&quot;breadcrumbs fLeft&quot;&gt;
+      &lt;ul class=&quot;breadcrumb&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;ul class=&quot;bar-actions&quot;&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;&lt;a data-toggle=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt; &lt;img src=&quot;icon&quot;&gt; Some text&lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu pull-right&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;icon&quot;&gt; Some submenu&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;</pre>
+<p>
+	By this way it will create us a breadcumbs on the left side and the top bar actions with dropdown possibility on the right side. Dropdown menu is used by bootstrap and it&#39;s easy to understand if you already visited twitter bootstrap page which we mentioned on the top of documentation.</p>
+<h4 id="content_area_page_info">Page info</h4>
+<pre class="brush: html">
+&lt;div class=&quot;page-info clearfix&quot;&gt;
+  &lt;img src=&quot;current page icon&quot;&gt;
+  &lt;h5&gt;Page name&lt;/h5&gt;
+
+
+  &lt;ul class=&quot;quick-actions&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;icon&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+<p>
+	This will create page name with an icon on the left side and quick actions on the right side. Quick actions work like switches, you can turn them on and off. It can be used for page auto refresh on/off and similar things...</p>
+<h4 id="content_area_inner_content">Inner content</h4>
+<p>
+	Inner content area can contain all elements like widgets, charts, forms, sparklines, tabs, etc...</p>
+<h5>
+	<em>Widget boxes</em></h5>
+<p>
+	Widget boxes can contain anything including charts, text, tabs, tables etc.. Structure is following:</p>
+<pre class="brush: html">
+&lt;div class=&quot;widget&quot;&gt;
+  &lt;div class=&quot;widget-header&quot;&gt;
+    &lt;h5&gt;Some title in header&lt;h5&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;widget-content&quot;&gt;
+    This is widget content area
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	Widget content area has 20px padding by default. You can remove that quick by adding class no-padding to the same. By that way padding will be 0px. We can also place dropdown buttons in header which be aligned on the right side, buttons without dropdown, tabs in content area, tabs in header area on the left-right side etc... Every demo page contains a different widget boxes styling so you can use them as examples and starting point.</p>
+<h5>
+	<em>Color boxes (placed on homepage in demo preview)</em></h5>
+<p>
+	Example of one colored box is following:</p>
+<pre class="brush: html">
+&lt;div align=&quot;center&quot;&gt;
+  &lt;ul class=&quot;color-status&quot;&gt;
+    &lt;li class=&quot;red&quot;&gt;
+      &lt;span&gt;Some title&lt;/span&gt;
+      &lt;div class=&quot;circle-stats noIcon&quot;&gt;
+        &lt;div class=&quot;chart&quot;&gt;&lt;/div&gt;
+      &lt;div&gt;
+      &lt;span class=&quot;bottom&quot;&gt;150gb/ 500gb&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+<p>
+	This will create one status box with heading, circle pie chart and info on bottom. Colors can be changed with changing class red to blue, orange etc... You can also align them to right or left side by changing align value on top div.</p>
+<h5>
+	<em>Quick action buttons on dashboard</em></h5>
+<pre class="brush: html">
+&lt;ul class=&quot;dashboard-actions clearfix&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+    &lt;div class=&quot;dashboard-action&quot;&gt;
+      &lt;img src=&quot;icon&quot;&gt;
+      &lt;h5&gt;Button name&lt;/h5&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>
+	This will create dashboard quick actions and you can place them more (two, three or five - whatever are your needs)...</p>
+<h5>
+	<em>Content divider</em></h5>
+<p>
+	Content divider has the same structure like the sidebar divider.</p>
+<pre class="brush: html">
+&lt;div class=&quot;divider&quot;&gt;&lt;span&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;</pre>
+<h5>
+	<em>General tasks widget</em></h5>
+<p>
+	General task has the following structure:</p>
+<pre class="brush: html">
+&lt;ul class=&quot;tasks&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;priority info&quot;&gt;&lt;img src=&quot;img/info-task.png&quot;&gt;&lt;/div&gt;
+    &lt;span class=&quot;title&quot;&gt;Do something&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+<p>
+	This is an example of one task with info color and icon. It can be also success, warning, danger etc... For more options and possibilites check out demo page. On demo page you will also notice that we used 2 tabs with tasks, and you can place many of them (by your needs).</p>
+<h5>
+	<em>Dashboard chat</em></h5>
+<p>
+	Dashboard chat can be placed anywhere, on any page and inside any grid. Chat has the following structure:</p>
+<pre class="brush: html">
+&lt;div class=&quot;messages&quot;&gt;
+  &lt;div class=&quot;message&quot;&gt;
+    &lt;a class=&quot;message-img&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;userimage&quot;&gt;&lt;/a&gt;
+    &lt;div class=&quot;message-body&quot;&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        &lt;p&gt;Some text&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;attribution&quot;&gt;by someone at time&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;enter-message&quot;&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;
+
+    &lt;div class=&quot;message-actions&quot;&gt;
+      &lt;div class=&quot;user-typing&quot;&gt;
+        &lt;img src=&quot;imageanimatetype.gif&quot;&gt;
+        someone typing
+      &lt;/div&gt;
+      &lt;div class=&quot;send-button&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;button small-button button-blue&gt;Send&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	This will create one simple message body. It&#39;s placed inside widget content area.</p>
+</section>
+<section id="forms">
+	<h3>Forms</h3><hr class="notop">
+<p>	For using forms please be ensure to include &lt;form&gt; element after using widget div. For example:</p>
+<pre class="brush: html">
+&lt;div class=&quot;widget&quot;&gt;
+  &lt;form class=&quot;form-horizontal&quot;&gt;
+    Here input widget header and content
+  &lt;/form&gt;
+&lt;/div&gt;</pre>
+<p>	Forms are used on the following way:</p>
+<pre class="brush: html">
+&lt;div class=&quot;form-row&quot;&gt;
+  &lt;label class=&quot;control&quot;&gt;Name of label&lt;/label&gt;
+
+  &lt;div class=&quot;controls&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;span12&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>	This will create one form row with label and input (full width). To change a grid of input just change class span12 to the grid you need. On this way you can also insert more inputs in the same line by using smaller grids. On the same way you insert selects, checkboxes, radios, multiselects, input tags, textarea, input file, spinners etc... If you would like to remove label, just place your element inside form-row div without any controls.</p>
+<h4 id="forms_form_wizards">Form wizards</h4>
+<p>	This template uses bootstrap wizards for form wizards.</p>
+<pre class="brush: html">
+&lt;div id=&quot;root-wizard&quot; class=&quot;wizard&quot;&gt;
+  &lt;div class=&quot;steps&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#tab1&quot; data-toggle=&quot;tab&quot;&gt;&lt;img src=&quot;image&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tab2&quot; data-toggle=&quot;tab&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  
+  &lt;div id=&quot;bar&quot; class=&quot;progress progress-stripped&quot;&gt; &lt;-- If you don&#39;t want to use remove this --&gt;
+    &lt;div class=&quot;bar&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div class=&quot;tab-pane&quot; id=&quot;tab1&quot;&gt;
+      First step content
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-pane&quot; id=&quot;tab2&quot;&gt;
+      Second step content
+    &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;</pre>
+<p>	This is an example of form wizard with &quot;icons and numbers as navigation&quot;. If you would like to place text instead of icons and numbers in navigation use following instead of div steps.</p>
+<pre class="brush: html">
+&lt;div class=&quot;navbar&quot;&gt;
+  &lt;div class=&quot;navbar-inner&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#tab1&quot; data-toggle=&quot;tab&quot;&gt;First&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#tab2&quot; data-toggle=&quot;tab&quot;&gt;Second&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>	This will create wizard with navbar navigation in header.</p>
+</section>
+<section id="other_pages">
+	<h3>Other pages</h3><hr class="notop">
+<h4 id="other_pages_inbox_page">Inbox page</h4>
+<p>
+	For inbox page templates visit demo pages and use them as start point and guide for creating your own one.</p>
+<pre class="brush: html">
+&lt;div class=&quot;messages&quot;&gt;
+  &lt;div class=&quot;list-messages&quot;&gt;
+    &lt;div class=&quot;list&quot;&gt;
+       &lt;table&gt;
+         &lt;tbody&gt;
+           &lt;tr&gt;
+             &lt;td class=&quot;check&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+             &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;stars&quot;&gt;&lt;/a&gt;&lt;/td&gt;
+             &lt;td&gt;Someone&lt;/td&gt;
+             &lt;td&gt;Lorem ipsum dolor&lt;/td&gt;
+             &lt;td class=&quot;time&quot;&gt;05:31PM&lt;/td&gt;
+           &lt;/tr&gt;
+         &lt;/tbody&gt;
+       &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;read-message&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;
+      &lt;h4&gt;Some title&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;message-content&quot;&gt;
+      message content
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	This will create a list of recieved messages and read message area. To create an e-mail navigation in sidebar like on demo, place following inside sidebar:</p>
+<pre class="brush: html">
+&lt;div class=&quot;message-navigation&quot;&gt;
+  &lt;div class=&quot;button-container&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;button small-button button-orange&quot;&gt;Create new message&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;h5&gt;Section name&lt;/h5&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Inbox &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Outbox &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+<p>
+	This will create the e-mail navigation menu in sidebar.</p>
+<h4 id="other_pages_inbox_v2">Inbox v2</h4>
+<pre class="brush: html">
+&lt;div class=&quot;messages_template&quot;&gt;
+  &lt;div class=&quot;list-messages&quot;&gt;
+    &lt;div class=&quot;list&quot;&gt;
+      &lt;div class=&quot;timer&quot;&gt;
+        Today
+      &lt;/div&gt;
+      &lt;div class=&quot;recieved-item&quot;&gt; &lt;-- One mail start --&gt;
+        &lt;div class=&quot;recieved-header&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;name&quot;&gt;&lt;span class=&quot;color&quot;&gt;&lt;/span&gt; Some name&lt;/a&gt;
+          &lt;div class=&quot;info&quot;&gt;
+            &lt;span class=&quot;time&quot;&gt;14:32PM&lt;/span&gt;
+            &lt;a href=&quot;#&quot; class=&quot;pin&quot;&gt;&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;arrow down&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;recieved-content&quot;&gt;
+          &lt;span&gt;Some message subject&lt;/span&gt;
+          &lt;p&gt;Message text&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt; <span style="font-family: Arial, Verdana, sans-serif;">&lt;-- One mail end --&gt;</span>
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	This is for our inbox v2 template. For more information and guides check out demo page.</p>
+<h4 id="other_pages_error_pages">Error pages</h4>
+<p>
+	Error pages are very simple and structure is:</p>
+<pre class="brush: html">
+&lt;div class=&quot;error-container&quot; align=&quot;center&quot;&gt;
+  &lt;div class=&quot;error-code&quot;&gt;
+    403
+  &lt;/div&gt;
+  &lt;div class=&quot;error-message&quot;&gt;
+    Access denied!&lt;br&gt;
+    &lt;p&gt;Some error message&lt;/p&gt;
+
+    &lt;div class=&quot;error-buttons&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;button small-button button-blue&quot;&gt;Dashboard&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;button small-button button-red&quot;&gt;Support&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	This will create simple error page.</p>
+<h4 id="other_pages_gallery">Gallery</h4>
+<p>
+	Gallery is responsive using jquery masonry&nbsp;plugin.</p>
+<p>
+	You first create html structure:</p>
+<pre class="brush: html">
+&lt;div class=&quot;gallery-container&quot;&gt;
+  &lt;div clas=&quot;gallery-item&quot;&gt;
+    &lt;img src=&quot;someimage.png&quot;&gt;
+  &lt;/div&gt;
+  ............
+&lt;/div&gt;</pre>
+<p>
+	You repeat gallery-item as many times as you want to create more images. Then you simply call the plugin to gallery-container and viola! That&#39;s it, you have got a responsive gallery grid which aligns automatically as you change the size of window.</p>
+</section>
+<section id="jquery_plugins">
+	<h3>jQuery plugins</h3><hr class="notop">
+<h5>
+	List of jquery plugins</h5>
+<hr>
+<ol>
+	<li>
+		bootstrap -&nbsp;http://twitter.github.com/bootstrap/</li>
+	<li>
+		bootstrap-wizards -&nbsp;https://github.com/gilluminate/Bootstrap-Wizard</li>
+	<li>
+		chosen -&nbsp;http://harvesthq.github.com/chosen/</li>
+	<li>
+		cleditor -&nbsp;http://premiumsoftware.net/cleditor/</li>
+	<li>
+		cookie -&nbsp;https://github.com/carhartl/jquery-cookie</li>
+	<li>
+		datatables -&nbsp;http://www.datatables.net/</li>
+	<li>
+		debounced - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/</li>
+	<li>
+		easy pie chart - http://rendro.github.com/easy-pie-chart/</li>
+	<li>
+		fancybox -&nbsp;http://fancybox.net/</li>
+	<li>
+		file tree -&nbsp;http://www.abeautifulsite.net/blog/2008/03/jquery-file-tree/</li>
+	<li>
+		flot - http://www.flotcharts.org/</li>
+	<li>
+		form validate -&nbsp;http://bassistance.de/jquery-plugins/jquery-plugin-validation/</li>
+	<li>
+		full calendar -&nbsp;http://arshaw.com/fullcalendar/</li>
+	<li>
+		jquery easing -&nbsp;http://gsgd.co.uk/sandbox/jquery/easing/</li>
+	<li>
+		jquery splitter -&nbsp;http://methvin.com/splitter/</li>
+	<li>
+		masked -&nbsp;http://digitalbush.com/projects/masked-input-plugin/</li>
+	<li>
+		masonary -&nbsp;http://masonry.desandro.com/</li>
+	<li>
+		mouse wheel -&nbsp;http://en.wikipedia.org/wiki/Scroll_wheel</li>
+	<li>
+		password metter -&nbsp;http://mypocket-technologies.com/jquery/password_strength/</li>
+	<li>
+		plupload -&nbsp;http://www.plupload.com/</li>
+	<li>
+		powertip -&nbsp;http://stevenbenner.github.com/jquery-powertip/</li>
+	<li>
+		range picker -&nbsp;http://www.dangrossman.info/2012/08/20/a-date-range-picker-for-twitter-bootstrap/</li>
+	<li>
+		rating -&nbsp;<span style="line-height: 19px; color: rgb(0, 0, 0); white-space: pre-wrap;">http://www.fyneworks.com/jquery/star-rating/</span></li>
+	<li>
+		scrollbar -&nbsp;http://manos.malihu.gr/jquery-custom-content-scroller/</li>
+	<li>
+		sparkline -&nbsp;http://omnipotent.net/jquery.sparkline/</li>
+	<li>
+		tags input -&nbsp;http://xoxco.com/projects/code/tagsinput/</li>
+	<li>
+		ui -&nbsp;http://jqueryui.com/</li>
+	<li>
+		uniform -&nbsp;http://uniformjs.com/</li>
+	<li>
+		ibutton -&nbsp;http://www.givainc.com/labs/ibutton_jquery_plugin.htm</li>
+	<li>
+		mouse wheel - https://github.com/brandonaaron/jquery-mousewheel</li>
+</ol>
+<p>
+	&nbsp;</p>
+</section>
+<section id="images_credit">
+	<h3>Images credit</h3><hr class="notop">
+<p>
+	All images are excluded from purchased template. They are used only for demo preview:</p>
+<p>
+	Big thanks to Moyan Brenn - <a href="http://www.flickr.com/photos/aigle_dore/">Images source</a></p>
+</section>
+
+	</div>
+</body>
+</html>
